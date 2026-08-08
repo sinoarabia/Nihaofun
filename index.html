@@ -68,6 +68,14 @@
         .text-balance {
             text-wrap: balance;
         }
+        /* Custom gradient for email button */
+        .premium-gradient {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+        }
+        .premium-gradient:hover {
+            background: linear-gradient(135deg, #0d9488 0%, #d97706 100%);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
@@ -132,7 +140,7 @@
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
                     <span data-ar="اطلب موقعك الآن عبر واتساب" data-en="Order Directly via WhatsApp" data-zh="通过 WhatsApp 立即下单">اطلب موقعك الآن عبر واتساب</span>
                 </button>
-                <a href="#comparison" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 transition whitespace-nowrap" data-ar="لماذا الموقع أفضل من السوشيال ميديا؟" data-en="Why Website vs Social Media?" data-zh="对比 Facebook / Instagram">
+                <a href="#comparison" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 transition whitespace-nowrap" data-ar="لماذا الموقع أفضل من السوشيال ميديا؟" data-en="Why Website vs Social Media?" data-zh="为何专属网站优于公共社交平台？">
                     لماذا الموقع أفضل من السوشيال ميديا؟
                 </a>
             </div>
@@ -147,15 +155,15 @@
         </div>
     </section>
 
-    <!-- Section 1: Website vs. Social Media Comparison (Now perfectly 6 cards!) -->
+    <!-- Section 1: Website vs. Social Media Comparison (Generic Social Media focus) -->
     <section id="comparison" class="py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-teal-400 font-bold text-sm tracking-widest uppercase mb-2 block" data-ar="مقارنة حاسمة" data-en="CRITICAL COMPARISON" data-zh="关键优势对比">مقارنة حاسمة</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-balance" data-ar="لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على فيسبوك وإنستغرام" data-en="Why You Need a Website: 6 Flaws of Relying Only on FB & IG" data-zh="为什么必须有独立网站？仅依赖 FB / Instagram 的 6 大致命缺陷">
-                    لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على فيسبوك وإنستغرام
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-balance" data-ar="لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على منصات التواصل الاجتماعي" data-en="Why You Need a Website: 6 Flaws of Relying Only on Social Platforms" data-zh="为什么必须有独立网站？仅依赖社交平台的 6 大致命缺陷">
+                    لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على منصات التواصل الاجتماعي
                 </h2>
-                <p class="text-slate-400 text-balance" data-ar="وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل." data-en="Social media is good for ads, but it cannot replace your dedicated space." data-zh="社交平台适合打广告，但无法替代拥有绝对品牌专属感的独立空间。">
+                <p class="text-slate-400 text-balance" data-ar="وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل." data-en="Social media is good for ads, but it cannot replace your dedicated space." data-zh="公共社交平台适合打广告，但无法替代拥有绝对品牌专属感的独立空间。">
                     وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل.
                 </p>
             </div>
@@ -168,8 +176,8 @@
                         <span data-ar="1. المصداقية والاحترافية" data-en="1. Credibility & Trust" data-zh="1. 品牌专属感与权威度">1. المصداقية والاحترافية</span>
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** صفحة الفيسبوك مجانية ولا تعطي انطباعاً بالرسمية.<br><br>✅ **الموقع المستقل:** تمتع باستخدام رابط باسمك الخاص (.com) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك." data-en="❌ **Social:** FB pages look cheap and unverified.<br><br>✅ **Website:** Enjoy free usage of a custom link with your name (.com) during your entire service period to build customer trust." data-zh="❌ **社交平台:** 谁都能建 FB 页，缺乏官方权威感与客户信任。<br><br>✅ **独立网站:** 只要在服务期内，您就享有专属名字（.com）的网址免费使用权，彰显无可比拟的形象。">
-                        ❌ <b>السوشيال ميديا:</b> صفحة الفيسبوك مجانية ولا تعطي انطباعاً بالرسمية.<br><br>✅ <b>الموقع المستقل:</b> تمتع باستخدام رابط باسمك الخاص (.com) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** الحسابات المجانية لا تعطي انطباعاً بالرسمية وتفقدك المصداقية.<br><br>✅ **الموقع المستقل:** تمتع باستخدام رابط باسمك الخاص (.com) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك." data-en="❌ **Social Media:** Free accounts look informal and lack official credibility.<br><br>✅ **Website:** Enjoy free usage of a custom link with your name (.com) during your entire service period to build customer trust." data-zh="❌ **社交平台:** 任何人都能免费注册账号，缺乏官方权威感与客户信任。<br><br>✅ **独立网站:** 只要在服务期内，您就享有专属名字（.com）的网址免费使用权，彰显无可比拟的形象。">
+                        ❌ <b>السوشيال ميديا:</b> الحسابات المجانية لا تعطي انطباعاً بالرسمية وتفقدك المصداقية.<br><br>✅ <b>الموقع المستقل:</b> تمتع باستخدام رابط باسمك الخاص (.com) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك.
                     </p>
                 </div>
 
@@ -179,8 +187,8 @@
                         <span data-ar="2. خوارزميات الوصول" data-en="2. Algorithm Reach" data-zh="2. 社交平台算法依赖">2. خوارزميات الوصول</span>
                         <i class="fa-solid fa-chart-line-down"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منشوراتك تصل لأقل من 5% من متابعيك إلا إذا دفعت إعلانات ممولة.<br><br>✅ **الموقع المستقل:** موقعك يعرض كل ما لديك 24/7 للجميع بدون قيود الإخفاء." data-en="❌ **Social:** Organic reach is under 5% without paid ads.<br><br>✅ **Website:** Everything you offer is visible 24/7 to everyone, no hidden posts." data-zh="❌ **社交平台:** 不花钱打广告，帖子只能触及不到 5% 的粉丝。<br><br>✅ **独立网站:** 您的所有信息全天候 24/7 完全开放，让每一个访客都能看到全部内容。">
-                        ❌ <b>السوشيال ميديا:</b> منشوراتك تصل لأقل من 5% من متابعيك بدون إعلانات.<br><br>✅ <b>الموقع المستقل:</b> موقعك يعرض كل ما لديك 24/7 للجميع بدون قيود الإخفاء.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منشوراتك تصل لأقل من 5% من متابعيك إلا إذا دفعت إعلانات ممولة مستمرة.<br><br>✅ **الموقع المستقل:** موقعك يعرض كل ما لديك 24/7 للجميع بدون قيود الإخفاء." data-en="❌ **Social Media:** Organic reach is under 5% without constant paid ads.<br><br>✅ **Website:** Everything you offer is visible 24/7 to everyone, no hidden posts." data-zh="❌ **社交平台:** 不花钱打广告，您的帖子只能触及不到 5% 的粉丝。<br><br>✅ **独立网站:** 您的所有信息全天候 24/7 完全开放，让每一个访客都能看到全部内容。">
+                        ❌ <b>السوشيال ميديا:</b> منشوراتك تصل لأقل من 5% من متابعيك إلا إذا دفعت إعلانات ممولة مستمرة.<br><br>✅ <b>الموقع المستقل:</b> موقعك يعرض كل ما لديك 24/7 للجميع بدون قيود الإخفاء.
                     </p>
                 </div>
 
@@ -190,8 +198,8 @@
                         <span data-ar="3. محركات البحث SEO" data-en="3. Google Search" data-zh="3. 搜索引擎带来的访客">3. محركات البحث SEO</span>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** نادراً ما تظهر صفحات الإنستغرام في نتائج بحث جوجل الأولى.<br><br>✅ **الموقع المستقل:** يجعلك تتصدر نتائج Google عندما يبحث الأردنيون عنك." data-en="❌ **Social:** IG/FB pages rarely rank high on Google Search.<br><br>✅ **Website:** Puts you right in front of people actively searching on Google." data-zh="❌ **社交平台:** 绝大多数 IG/FB 主页无法在 Google 搜索结果首页排名前列。<br><br>✅ **独立网站:** 经过专业优化，让在 Google 上搜索的客户直接找到您。">
-                        ❌ <b>السوشيال ميديا:</b> نادراً ما تظهر صفحات الإنستغرام في البحث الأول.<br><br>✅ <b>الموقع المستقل:</b> يجعلك تتصدر نتائج Google عندما يبحث الأردنيون عنك.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** نادراً ما تظهر صفحات السوشيال ميديا في نتائج بحث جوجل الأولى.<br><br>✅ **الموقع المستقل:** يجعلك تتصدر نتائج Google عندما يبحث الأردنيون عن نشاطك." data-en="❌ **Social Media:** Social profiles rarely rank high on Google Search pages.<br><br>✅ **Website:** Puts you right in front of people actively searching on Google." data-zh="❌ **社交平台:** 绝大多数社交账号主页无法在 Google 搜索结果首页排名前列。<br><br>✅ **独立网站:** 经过专业优化，让在 Google 上搜索的客户直接找到您。">
+                        ❌ <b>السوشيال ميديا:</b> نادراً ما تظهر صفحات السوشيال ميديا في نتائج بحث جوجل الأولى.<br><br>✅ <b>الموقع المستقل:</b> يجعلك تتصدر نتائج Google عندما يبحث الأردنيون عن نشاطك.
                     </p>
                 </div>
 
@@ -201,8 +209,8 @@
                         <span data-ar="4. الطلب المباشر" data-en="4. Direct Ordering Flow" data-zh="4. 无干扰，一键拿单">4. الطلب المباشر</span>
                         <i class="fa-solid fa-basket-shopping"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** العميل يتوه في إعلانات المنافسين والتعليقات العشوائية.<br><br>✅ **الموقع المستقل:** ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة عبر واتساب." data-en="❌ **Social:** Customers get lost in competitor ads and messy comments.<br><br>✅ **Website:** Send the link, clients see ONLY your products, and order instantly via WhatsApp." data-zh="❌ **社交平台:** 客户容易被同行的广告、杂乱的留言分散注意力甚至跑单。<br><br>✅ **独立网站:** 客户专心看您的产品，没有任何别人打扰，点击一键带着需求直达您的 WhatsApp！">
-                        ❌ <b>السوشيال ميديا:</b> العميل يتوه في إعلانات المنافسين والتعليقات العشوائية.<br><br>✅ <b>الموقع المستقل:</b> ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة عبر واتساب.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** العميل يتوه في إعلانات المنافسين المزعجة والتعليقات العشوائية.<br><br>✅ **الموقع المستقل:** ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة." data-en="❌ **Social Media:** Customers get lost in competitor ads and messy platform comments.<br><br>✅ **Website:** Send the link, clients see ONLY your products, and order instantly." data-zh="❌ **社交平台:** 客户容易被同行的广告、杂乱的留言分散注意力甚至跑单。<br><br>✅ **独立网站:** 客户专心看您的产品，没有任何别人打扰，点击一键带着需求直达您的 WhatsApp！">
+                        ❌ <b>السوشيال ميديا:</b> العميل يتوه في إعلانات المنافسين المزعجة والتعليقات العشوائية.<br><br>✅ <b>الموقع المستقل:</b> ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة.
                     </p>
                 </div>
 
@@ -212,19 +220,19 @@
                         <span data-ar="5. أمان الحساب وإدارته" data-en="5. Safety & Peace of Mind" data-zh="5. 告别封禁，绝对安全">5. أمان الحساب وإدارته</span>
                         <i class="fa-solid fa-lock text-rose-400"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** قد يُغلق حسابك في أي لحظة وتخسر صورك ومتابعيك.<br><br>✅ **الموقع المستقل:** معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك." data-en="❌ **Social:** Account can be suspended anytime, losing your contacts.<br><br>✅ **Website:** Your information is incredibly safe. Private link usage is guaranteed and free while active." data-zh="❌ **社交平台:** 随时面临封号限流，辛苦积累的心血一夕清空。<br><br>✅ **独立网站:** 您的数据安全托管，不受干涉。服务期内专属网址一直免费为您护航。">
-                        ❌ <b>السوشيال ميديا:</b> قد يُغلق حسابك في أي لحظة وتخسر صورك ومتابعيك.<br><br>✅ <b>الموقع المستقل:</b> معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** قد تُحظر أو تُغلق حساباتك في أي لحظة وتخسر كل جهودك.<br><br>✅ **الموقع المستقل:** معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك." data-en="❌ **Social Media:** Your accounts can be suspended anytime, losing all your contacts.<br><br>✅ **Website:** Your information is incredibly safe. Private link usage is guaranteed and free while active." data-zh="❌ **社交平台:** 随时面临封号限流风险，辛苦积累的心血一夕清空。<br><br>✅ **独立网站:** 您的数据安全托管，不受干涉。服务期内专属网址一直免费为您护航。">
+                        ❌ <b>السوشيال ميديا:</b> قد تُحظر أو تُغلق حساباتك في أي لحظة وتخسر كل جهودك.<br><br>✅ <b>الموقع المستقل:</b> معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك.
                     </p>
                 </div>
 
-                <!-- Point 6 (NEW!) -->
+                <!-- Point 6 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
                         <span data-ar="6. تنظيم المحتوى وتصفحه" data-en="6. Content Organization" data-zh="6. 内容分类与浏览体验">6. تنظيم المحتوى وتصفحه</span>
                         <i class="fa-solid fa-layer-group text-rose-400"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل العثور عليها.<br><br>✅ **الموقع المستقل:** كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية وسهلة." data-en="❌ **Social:** Older posts and products get buried quickly and are hard to find.<br><br>✅ **Website:** Everything is neatly organized in clear sections, making browsing a true pleasure." data-zh="❌ **社交平台:** 过去的帖子极易被淹没，客户很难翻找想要了解的信息。<br><br>✅ **独立网站:** 所有内容分类整齐，目录清晰，让客户的浏览与下单变成一种享受。">
-                        ❌ <b>السوشيال ميديا:</b> منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل العثور عليها.<br><br>✅ <b>الموقع المستقل:</b> كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية وسهلة.
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل البحث عنها.<br><br>✅ **الموقع المستقل:** كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية." data-en="❌ **Social Media:** Older posts and products get buried quickly and are hard to find.<br><br>✅ **Website:** Everything is neatly organized in clear sections, making browsing a true pleasure." data-zh="❌ **社交平台:** 过去的帖子信息流极易被淹没，客户很难翻找想要了解的信息。<br><br>✅ **独立网站:** 所有内容分类整齐，目录清晰，让客户的浏览与下单变成一种享受。">
+                        ❌ <b>السوشيال ميديا:</b> منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل البحث عنها.<br><br>✅ <b>الموقع المستقل:</b> كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية.
                     </p>
                 </div>
             </div>
@@ -242,7 +250,7 @@
     <section id="personal" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="inline-block bg-teal-100 text-teal-800 border border-teal-200 px-3 py-1 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'>48 ساعة</span>!" data-en="⚡ Fast Turnaround: Personal Sites in <span class='whitespace-nowrap'>~48 Hours</span>!" data-zh="⚡ 极速交付：个人网站最快 <span class='whitespace-nowrap'>48小时</span> 交付！">
+                <span class="inline-block bg-teal-100 text-teal-800 border border-teal-200 px-3 py-1 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'>48 ساعة</span>!" data-en="⚡ Fast Turnaround: Personal Sites in <span class='whitespace-nowrap'>~48 Hours</span>!" data-zh="⚡ 极极速交付：个人网站最快 <span class='whitespace-nowrap'>48小时</span> 交付！">
                     ⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'>48 ساعة</span>!
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="مواقع شخصية وتوثيق هدايا المناسبات 🎁" data-en="Personal & Celebration Gift Websites 🎁" data-zh="个人与家庭纪念日礼物网站 🎁">
@@ -481,20 +489,22 @@
 
     <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-right">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
-                <div>
-                    <span class="text-2xl font-extrabold text-white">Nihao<span class="text-teal-500">Fun</span>.com</span>
-                    <p class="text-xs text-slate-500 mt-1" data-ar="جميع الحقوق محفوظة © 2026 - تصميم المواقع في الأردن" data-en="All Rights Reserved © 2026 - Jordan Web Development" data-zh="版权所有 © 2026 - NihaoFun 约旦建站服务">جميع الحقوق محفوظة © 2026 - تصميم المواقع في الأردن</p>
-                </div>
-                
-                <!-- Icon Only WhatsApp in Footer -->
-                <div class="flex items-center gap-4">
-                    <button onclick="openPromoModal('طلب من ترويسة الموقع السفلى')" class="w-12 h-12 rounded-full bg-teal-600 text-white flex items-center justify-center text-2xl hover:bg-teal-500 transition shadow-lg" title="WhatsApp Contact">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </button>
-                </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center gap-6">
+            
+            <!-- Brand & Copyright -->
+            <div>
+                <span class="text-2xl font-extrabold text-white">Nihao<span class="text-teal-500">Fun</span>.com</span>
+                <p class="text-xs text-slate-500 mt-2" data-ar="جميع الحقوق محفوظة © 2026 - تصميم المواقع في الأردن" data-en="All Rights Reserved © 2026 - Jordan Web Development" data-zh="版权所有 © 2026 - NihaoFun 约旦建站服务">
+                    جميع الحقوق محفوظة © 2026 - تصميم المواقع في الأردن
+                </p>
             </div>
+            
+            <!-- Premium Email Button -->
+            <a href="mailto:sinoarabiaofficial@gmail.com" class="inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-full premium-gradient text-teal-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm group">
+                <i class="fa-solid fa-envelope text-lg group-hover:animate-pulse"></i>
+                <span class="font-bold tracking-wider text-sm sm:text-base font-sans" dir="ltr">sinoarabiaofficial@gmail.com</span>
+            </a>
+
         </div>
     </footer>
 
