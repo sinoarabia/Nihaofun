@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NihaoFun - تصميم مواقع إلكترونية في الأردن | Web Development Jordan</title>
+    <meta name="description" content="أفضل خدمة تصميم مواقع إلكترونية للشركات والأفراد في الأردن. أسعار تبدأ من 49 دينار شاملة كل شيء.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Tajawal for Arabic, Inter for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+        }
+        .en-mode {
+            direction: ltr !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white text-xl font-bold shadow-md">
+                    N
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold text-slate-900 tracking-tight">Nihao<span class="text-teal-600">Fun</span></span>
+                    <span class="block text-xs text-slate-500 font-medium">.com</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#services" class="hover:text-teal-600 transition" data-ar="القطاعات والخدمات" data-en="Sectors & Services">القطاعات والخدمات</a>
+                <a href="#personal" class="hover:text-teal-600 transition" data-ar="المواقع الشخصية والهدايا" data-en="Personal & Gifts">المواقع الشخصية والهدايا</a>
+                <a href="#pricing" class="hover:text-teal-600 transition" data-ar="الأسعار والتكلفة" data-en="Pricing">الأسعار والتكلفة</a>
+                <a href="#about" class="hover:text-teal-600 transition" data-ar="لماذا نحن؟" data-en="Why Us?">لماذا نحن؟</a>
+            </nav>
+
+            <!-- Language & Action CTA -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLanguage()" id="langBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100 transition">
+                    English
+                </button>
+                <button onclick="openPromoModal('طلب عام / الاستفسار الأولي')" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-sm transition flex items-center gap-2">
+                    <i class="fa-brands font-semibold fa-whatsapp text-lg">
+</i>
+                    <span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 lg:py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block bg-teal-500/20 text-teal-300 border border-teal-500/30 px-4 py-1.5 rounded-full text-xs font-semibold mb-6" data-ar="🥇 الخدمة الأولى لتصميم المواقع في المملكة الأردنية الهاشمية" data-en="🥇 Premier Web Development Service in Jordan">
+                🥇 الخدمة الأولى لتصميم المواقع في المملكة الأردنية الهاشمية
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" data-ar="احصل على موقع إلكتروني احترافي لعملك أو مناسبتك الخاصة" data-en="Get a Professional Website for Your Business or Special Occasion">
+                احصل على موقع إلكتروني احترافي لعملك أو مناسبتك الخاصة
+            </h1>
+            <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-lg mb-10 leading-relaxed" data-ar="نساعد الشركات المحلية والأفراد في الأردن على بناء تواجد رقمي مبهر. حلول شاملة تبدأ من 49 دينار أردني فقط شاملة اسم النطاق والاستضافة والإنشاء!" data-en="We help local businesses and individuals in Jordan build a stunning digital presence. Complete solutions starting from only 49 JOD including domain, hosting, and setup!">
+                نساعد الشركات المحلية والأفراد في الأردن على بناء تواجد رقمي مبهر. حلول شاملة تبدأ من 49 دينار أردني فقط شاملة اسم النطاق والاستضافة والإنشاء!
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="openPromoModal('تصميم موقع للشركات والأعمال')" class="w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span data-ar="صمم موقعك الآن عبر واتساب" data-en="Create Your Site via WhatsApp">صمم موقعك الآن عبر واتساب</span>
+                </button>
+                <a href="#pricing" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 transition" data-ar="استعراض خطط الأسعار" data-en="View Pricing Plans">
+                    استعراض خطط الأسعار
+                </a>
+            </div>
+            
+            <!-- Quick Trust Badges -->
+            <div class="mt-14 pt-10 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs text-slate-400">
+                <div><i class="fa-solid fa-bolt text-teal-400 text-lg mb-1 block"></i><span data-ar="تسليم سريع خلال أيام" data-en="Fast Delivery in Days">تسليم سريع خلال أيام</span></div>
+                <div><i class="fa-solid fa-shield-halved text-teal-400 text-lg mb-1 block"></i><span data-ar="دعم فني وصيانة مستمرة" data-en="Continuous Tech Support">دعم فني وصيانة مستمرة</span></div>
+                <div><i class="fa-solid fa-mobile-screen text-teal-400 text-lg mb-1 block"></i><span data-ar="متوافق 100% مع الهواتف" data-en="100% Mobile Responsive">متوافق 100% مع الهواتف</span></div>
+                <div><i class="fa-solid fa-globe text-teal-400 text-lg mb-1 block"></i><span data-ar="شامل اسم النطاق (.com)" data-en="Includes Domain Name (.com)">شامل اسم النطاق (.com)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4" data-ar="أسعار واضحة وتنافسية بدون تكاليف خفية" data-en="Transparent & Competitive Pricing">
+                    أسعار واضحة وتنافسية بدون تكاليف خفية
+                </h2>
+                <p class="text-slate-600" data-ar="أسعارنا تشمل جميع التكاليف: تصميم الموقع، اسم النطاق (Domain)، الاستضافة السريعة، والدعم الفني." data-en="All inclusive: Website design, domain name, high-speed hosting, and technical support.">
+                    أسعارنا تشمل جميع التكاليف: تصميم الموقع، اسم النطاق (Domain)، الاستضافة السريعة، والدعم الفني.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Package 1: First Year -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-teal-500 shadow-xl relative overflow-hidden card-hover">
+                    <span class="absolute -left-12 top-6 bg-teal-500 text-white text-xs font-bold py-1 px-12 -rotate-45" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="باقة السنة الأولى" data-en="First Year Package">باقة السنة الأولى</h3>
+                    <p class="text-slate-500 text-sm mb-6" data-ar="تصميم متكامل وإطلاق الموقع من الصفر" data-en="Full design and launch from scratch">تصميم متكامل وإطلاق الموقع من الصفر</p>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl sm:text-5xl font-extrabold text-teal-600">49 - 499</span>
+                        <span class="text-lg font-bold text-slate-700 mr-2 ml-2" data-ar="دينار أردني (JD)" data-en="JOD">دينار أردني (JD)</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-600 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-teal-500"></i> <span data-ar="تصميم عصري متوافق مع الموبايل والكمبيوتر" data-en="Modern design for Mobile & PC">تصميم عصري متوافق مع الموبايل والكمبيوتر</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-teal-500"></i> <span data-ar="حجز اسم نطاق خاص (Domain .com)" data-en="Custom Domain Name (.com)">حجز اسم نطاق خاص (Domain .com)</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-teal-500"></i> <span data-ar="استضافة سريعة وآمنة لمدة سنة كاملة" data-en="Fast & Secure Hosting for 1 Year">استضافة سريعة وآمنة لمدة سنة كاملة</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-teal-500"></i> <span data-ar="ربط مباشر بحساب الواتساب وشبكات التواصل" data-en="WhatsApp & Social Media Integration">ربط مباشر بحساب الواتساب وشبكات التواصل</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-teal-500"></i> <span data-ar="تهيئة الموقع لمحركات البحث (SEO)" data-en="Search Engine Optimization (SEO)">تهيئة الموقع لمحركات البحث (SEO)</span></li>
+                    </ul>
+                    <button onclick="openPromoModal('حجز باقة السنة الأولى (49-499 دينار)')" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span data-ar="اطلب باقتك الأولى الآن" data-en="Get First Year Package">اطلب باقتك الأولى الآن</span>
+                    </button>
+                </div>
+
+                <!-- Package 2: Renewal Year -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-md card-hover flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="الاشتراك والتجديد السنوي" data-en="Annual Renewal Package">الاشتراك والتجديد السنوي</h3>
+                        <p class="text-slate-500 text-sm mb-6" data-ar="ابتداءً من السنة الثانية للحفاظ على تشغيل موقعك" data-en="Starting from 2nd year onwards">ابتداءً من السنة الثانية للحفاظ على تشغيل موقعك</p>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-4xl sm:text-5xl font-extrabold text-slate-900">39 - 399</span>
+                            <span class="text-lg font-bold text-slate-700 mr-2 ml-2" data-ar="دينار أردني (JD) / سنوياً" data-en="JOD / Year">دينار أردني (JD) / سنوياً</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-600"></i> <span data-ar="تجديد اسم النطاق (Domain Renewal)" data-en="Domain Name Renewal">تجديد اسم النطاق (Domain Renewal)</span></li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-600"></i> <span data-ar="تجديد الاستضافة السحابية والنسخ الاحتياطي" data-en="Cloud Hosting & Backups">تجديد الاستضافة السحابية والنسخ الاحتياطي</span></li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-600"></i> <span data-ar="الصيانة الفنية الحصرية والتحديثات الأمنية" data-en="Technical Maintenance & Security">الصيانة الفنية الحصرية والتحديثات الأمنية</span></li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-600"></i> <span data-ar="تحديث البيانات والصور حسب الطلب" data-en="Content Updates On-Demand">تحديث البيانات والصور حسب الطلب</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openPromoModal('استفسار عن التجديد السنوي (39-399 دينار)')" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span data-ar="استفسر عن خطط التجديد" data-en="Inquire About Renewal">استفسر عن خطط التجديد</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top 20 Jordan Business Sectors -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4" data-ar="نغطي أهم 20 قطاعاً تجارياً في الأردن" data-en="Top 20 Business Sectors in Jordan We Serve">
+                    نغطي أهم 20 قطاعاً تجارياً في الأردن
+                </h2>
+                <p class="text-slate-600" data-ar="مهما كان مجال عملك في عمّان، إربد، العقبة، أو أي محافظة أردنية، لدينا التصميم المناسب لنشاطك." data-en="Whatever your industry in Amman, Irbid, Aqaba or anywhere in Jordan, we have tailored designs.">
+                    مهما كان مجال عملك في عمّان، إربد، العقبة، أو أي محافظة أردنية، لدينا التصميم المناسب لنشاطك.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Sector 1 -->
+                <div onclick="openPromoModal('موقع لقطاع: المطاعم والكافيهات')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-utensils"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المطاعم والكافيهات" data-en="Restaurants & Cafes">المطاعم والكافيهات</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="قوائم طعام رقمية وحجوزات" data-en="Digital Menus & Bookings">قوائم طعام رقمية وحجوزات</p>
+                </div>
+
+                <!-- Sector 2 -->
+                <div onclick="openPromoModal('موقع لقطاع: العيادات والمراكز الطبية')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="العيادات والأطباء" data-en="Medical Clinics & Doctors">العيادات والأطباء</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="حجز المواعيد وحساب الأطباء" data-en="Appointments & Profiles">حجز المواعيد وحساب الأطباء</p>
+                </div>
+
+                <!-- Sector 3 -->
+                <div onclick="openPromoModal('موقع لقطاع: العقارات والمكاتب العقارية')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-city"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="العقارات والمكاتب" data-en="Real Estate Agencies">العقارات والمكاتب</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="عرض الشقق والأراضي للبيع" data-en="Property Listings">عرض الشقق والأراضي للبيع</p>
+                </div>
+
+                <!-- Sector 4 -->
+                <div onclick="openPromoModal('موقع لقطاع: السياحة والفنادق والمكاتب السياحية')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-plane"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="السياحة والفنادق" data-en="Tourism & Travel">السياحة والفنادق</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="برامج السياحة في البتراء والرم" data-en="Tours & Hotel Booking">برامج السياحة في البتراء والرم</p>
+                </div>
+
+                <!-- Sector 5 -->
+                <div onclick="openPromoModal('موقع لقطاع: المتاجر الإلكترونية والتجزئة')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المتاجر الإلكترونية" data-en="E-commerce Stores">المتاجر الإلكترونية</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="بيع المنتجات والدفع الإلكتروني" data-en="Sell Products Online">بيع المنتجات والدفع الإلكتروني</p>
+                </div>
+
+                <!-- Sector 6 -->
+                <div onclick="openPromoModal('موقع لقطاع: مكاتب المحاماة والاستشارات')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المحاماة والاستشارات" data-en="Law & Legal Services">المحاماة والاستشارات</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="عرض الخدمات القانونية" data-en="Legal Profiles">عرض الخدمات القانونية</p>
+                </div>
+
+                <!-- Sector 7 -->
+                <div onclick="openPromoModal('موقع لقطاع: تأجير السيارات والخدمات')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-car"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="تأجير السيارات" data-en="Car Rental & Auto">تأجير السيارات</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="حجز السيارات أونلاين" data-en="Online Fleet Booking">حجز السيارات أونلاين</p>
+                </div>
+
+                <!-- Sector 8 -->
+                <div onclick="openPromoModal('موقع لقطاع: المدارس والأكاديميات والتعليم')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="التعليم والأكاديميات" data-en="Education & Academies">التعليم والأكاديميات</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="المراكز والتعليم عن بعد" data-en="Courses & Tutoring">المراكز والتعليم عن بعد</p>
+                </div>
+
+                <!-- Sector 9 -->
+                <div onclick="openPromoModal('موقع لقطاع: صالونات التجميل والسبا')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-spa"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="صالونات التجميل والسبا" data-en="Beauty Salons & Spas">صالونات التجميل والسبا</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="عرض الخدمات وحجز المواعيد" data-en="Service Catalogs & Booking">عرض الخدمات وحجز المواعيد</p>
+                </div>
+
+                <!-- Sector 10 -->
+                <div onclick="openPromoModal('موقع لقطاع: شركات المقاولات والهندسة')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المقاولات والهندسة" data-en="Construction & Engineering">المقاولات والهندسة</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="معرض المشاريع والخدمات" data-en="Project Portfolio">معرض المشاريع والخدمات</p>
+                </div>
+
+                <!-- Sector 11 -->
+                <div onclick="openPromoModal('موقع لقطاع: التصوير والإنتاج الإعلامي')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-camera"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="التصوير والميديا" data-en="Photography & Media">التصوير والميديا</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="معرض أعمال الصور والفيديو" data-en="Photo & Video Portfolios">معرض أعمال الصور والفيديو</p>
+                </div>
+
+                <!-- Sector 12 -->
+                <div onclick="openPromoModal('موقع لقطاع: تنظيم الحفلات والمناسبات')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="تنظيم المناسبات" data-en="Events & Weddings">تنظيم المناسبات</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="تجهيز الأعراس والحفلات" data-en="Weddings & Parties">تجهيز الأعراس والحفلات</p>
+                </div>
+
+                <!-- Sector 13 -->
+                <div onclick="openPromoModal('موقع لقطاع: خدمات المحاسبة والمالية')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-calculator"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المحاسبة والخدمات المالية" data-en="Accounting & Finance">المحاسبة والخدمات المالية</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="تدقيق الحسابات والاستشارات" data-en="Audit & Tax Services">تدقيق الحسابات والاستشارات</p>
+                </div>
+
+                <!-- Sector 14 -->
+                <div onclick="openPromoModal('موقع لقطاع: شركات اللوجستيات والشحن')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="اللوجستيات والشحن" data-en="Logistics & Freight">اللوجستيات والشحن</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="تتبع وتوصيل البضائع" data-en="Shipping & Delivery">تتبع وتوصيل البضائع</p>
+                </div>
+
+                <!-- Sector 15 -->
+                <div onclick="openPromoModal('موقع لقطاع: الأندية الرياضية والجيم')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-dumbbell"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="الأندية الرياضية (Gym)" data-en="Gyms & Fitness">الأندية الرياضية (Gym)</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="اشتراكات الجيم والتدريب" data-en="Fitness Memberships">اشتراكات الجيم والتدريب</p>
+                </div>
+
+                <!-- Sector 16 -->
+                <div onclick="openPromoModal('موقع لقطاع: الصيانة والخدمات المنزلية')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-wrench"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="الخدمات المنزلية" data-en="Home Maintenance">الخدمات المنزلية</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="صيانة التكييف والكهرباء" data-en="AC & Electric Maintenance">صيانة التكييف والكهرباء</p>
+                </div>
+
+                <!-- Sector 17 -->
+                <div onclick="openPromoModal('موقع لقطاع: شركات النظافة والحراسة')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-broom"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="النظافة والحراسة" data-en="Cleaning & Security">النظافة والحراسة</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="تنظيف المباني والأمن" data-en="Facility Management">تنظيف المباني والأمن</p>
+                </div>
+
+                <!-- Sector 18 -->
+                <div onclick="openPromoModal('موقع لقطاع: التجارة العامة والاستيراد والتصدير')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-boxes-packing"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="التجارة والاستيراد" data-en="Trading & Import/Export">التجارة والاستيراد</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="كتالوج المنتجات والشركاء" data-en="Product Catalogs">كتالوج المنتجات والشركاء</p>
+                </div>
+
+                <!-- Sector 19 -->
+                <div onclick="openPromoModal('موقع لقطاع: التسويق والدعاية وإدارة السوشيال ميديا')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="التسويق والدعاية" data-en="Marketing Agencies">التسويق والدعاية</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="وكالات الإعلان الرقمي" data-en="Digital Agencies">وكالات الإعلان الرقمي</p>
+                </div>
+
+                <!-- Sector 20 -->
+                <div onclick="openPromoModal('موقع لقطاع: السير الذاتية والمواقع الشخصية والمستشارين')" class="p-5 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center">
+                    <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xl"><i class="fa-solid fa-user-tie"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base" data-ar="المستشارون والخبراء" data-en="Consultants & Portfolios">المستشارون والخبراء</h4>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="سيرة ذاتية تفاعلية وموقع شخصي" data-en="Personal Branding & CV">سيرة ذاتية تفاعلية وموقع شخصي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal & Gift Websites Section -->
+    <section id="personal" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-teal-400 font-bold text-sm tracking-widest uppercase mb-2 block" data-ar="لمسة شخصية لا تُنسى" data-en="UNFORGETTABLE PERSONAL TOUCH">لمسة شخصية لا تُنسى</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" data-ar="مواقع إلكترونية شخصية.. هدايا تدوم مدى الحياة 🎁" data-en="Personal Gift Websites That Last Forever 🎁">
+                    مواقع إلكترونية شخصية.. هدايا تدوم مدى الحياة 🎁
+                </h2>
+                <p class="text-slate-400" data-ar="اجعل مناسبتك الخاصة أو هديتك لمن تحب تحفة رقمية مميزة تبقى للأبد." data-en="Make your special memory or gift an eternal digital masterpiece.">
+                    اجعل مناسبتك الخاصة أو هديتك لمن تحب تحفة رقمية مميزة تبقى للأبد.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gift Type 1 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-teal-500 transition card-hover">
+                    <div class="text-4xl mb-4">🎂</div>
+                    <h3 class="text-xl font-bold mb-2" data-ar="موقع عيد ميلاد استثنائي" data-en="Birthday Gift Website">موقع عيد ميلاد استثنائي</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-ar="أهدِ من تحب موقعاً خاصاً يحتوي على ألبوم صور، رسائل التهنئة الصوتية والمكتوبة، وعدّاد زمني تنازلي." data-en="Gift your loved ones a dedicated website with photo albums, audio/text greetings, and countdowns.">
+                        أهدِ من تحب موقعاً خاصاً يحتوي على ألبوم صور، رسائل التهنئة الصوتية والمكتوبة، وعدّاد زمني تنازلي.
+                    </p>
+                    <button onclick="openPromoModal('موقع هدية عيد ميلاد شخصي')" class="w-full bg-slate-700 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl transition text-sm">
+                        <span data-ar="صمم موقع عيد ميلاد" data-en="Create Birthday Site">صمم موقع عيد ميلاد</span>
+                    </button>
+                </div>
+
+                <!-- Gift Type 2 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-teal-500 transition card-hover">
+                    <div class="text-4xl mb-4">💍</div>
+                    <h3 class="text-xl font-bold mb-2" data-ar="تهنئة الزواج والذكرى السنوية" data-en="Wedding & Anniversary Site">تهنئة الزواج والذكرى السنوية</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-ar="تخليد ذكريات الزفاف، دعوات الخطوبة الرقمية، ومشاركات أمنيات الأهل والأصدقاء في صفحة راقية." data-en="Immortalize wedding memories, digital engagement invitations, and family wishes on an elegant page.">
+                        تخليد ذكريات الزفاف، دعوات الخطوبة الرقمية، ومشاركات أمنيات الأهل والأصدقاء في صفحة راقية.
+                    </p>
+                    <button onclick="openPromoModal('موقع مناسبة زواج أو ذكرى سنوية')" class="w-full bg-slate-700 hover:bg-teal-600 text-white font-bold py-2.5 rounded-xl transition text-sm">
+                        <span data-ar="صمم موقع مناسبة زفاف" data-en="Create Anniversary Site">صمم موقع مناسبة زفاف</span>
+                    </button>
+                </div>
+
+                <!-- Gift Type 3 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-teal-500/50 shadow-lg transition card-hover">
+                    <div class="text-4xl mb-4">👶</div>
+                    <h3 class="text-xl font-bold mb-2" data-ar="موقع توثيق نمو المواليد والأطفال" data-en="Baby Milestone & Growth Tracker">موقع توثيق نمو المواليد والأطفال</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-ar="موقع متجدد لطفلك: صور السنة الأولى، صور السنة الثانية، والمحطات السعيدة يستمر معكم طوال العمر." data-en="A growing site for your child: 1st year photos, 2nd year milestones, updated as they grow up!">
+                        موقع متجدد لطفلك: صور السنة الأولى، صور السنة الثانية، والمحطات السعيدة يستمر معكم طوال العمر.
+                    </p>
+                    <button onclick="openPromoModal('موقع توثيق نمو أطفال (سنة أولى، ثانية..)')" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl transition text-sm">
+                        <span data-ar="صمم موقع لطفلك الآن" data-en="Create Baby Growth Site">صمم موقع لطفلك الآن</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-teal-600 font-bold text-sm" data-ar="لماذا NihaoFun الأفضل في الأردن؟" data-en="Why NihaoFun in Jordan?">لماذا NihaoFun الأفضل في الأردن؟</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-6 leading-tight" data-ar="نقدم تجربة تصميم سهلة وسريعة تناسب احتياجاتك تماماً" data-en="Fast & Seamless Web Development Built for You">
+                        نقدم تجربة تصميم سهلة وسريعة تناسب احتياجاتك تماماً
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xl">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1" data-ar="لا داعي للتعقيد التقني" data-en="No Technical Hassle">لا داعي للتعقيد التقني</h4>
+                                <p class="text-slate-600 text-sm" data-ar="نحن نتولى كافة الشؤون التقنية: الاستضافة، الدومين، والتصميم. أنت فقط تزودنا بمعلوماتك." data-en="We handle domain, hosting, and technical setup. Just provide us your info.">نحن نتولى كافة الشؤون التقنية: الاستضافة، الدومين، والتصميم. أنت فقط تزودنا بمعلوماتك.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xl">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1" data-ar="سرعة فائقة وأداء ممتاز" data-en="High Performance">سرعة فائقة وأداء ممتاز</h4>
+                                <p class="text-slate-600 text-sm" data-ar="مواقتنا مصممة لتعمل بسرعة صاروخية على شبكات الموبايل في عمّان وباقي المحافظات." data-en="Fast loading speed optimized for Jordan mobile networks.">مواقتنا مصممة لتعمل بسرعة صاروخية على شبكات الموبايل في عمّان وباقي المحافظات.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 shrink-0 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-xl">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1" data-ar="دعم مباشر عبر واتساب" data-en="Direct WhatsApp Support">دعم مباشر عبر واتساب</h4>
+                                <p class="text-slate-600 text-sm" data-ar="تواصل مباشر ودائم معنا لتحديث بيانتك ومحتوى موقعك في أي وقت." data-en="Direct support anytime to update your content.">تواصل مباشر ودائم معنا لتحديث بيانتك ومحتوى موقعك في أي وقت.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-100 p-8 rounded-3xl border border-slate-200 text-center relative">
+                    <div class="w-20 h-20 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3" data-ar="جاهز لإطلاق موقعك اليوم؟" data-en="Ready to Launch Today?">جاهز لإطلاق موقعك اليوم؟</h3>
+                    <p class="text-slate-600 text-sm mb-6" data-ar="اضغط الزر أدناه ليتم صياغة رسالة عربية مخصصة وموجهة فوراً إلى حسابنا على واتساب" data-en="Click below to send a customized WhatsApp inquiry directly to us">
+                        اضغط الزر أدناه ليتم صياغة رسالة عربية مخصصة وموجهة فوراً إلى حسابنا على واتساب
+                    </p>
+                    <button onclick="openPromoModal('استفسار مباشر من قسم التفاصيل')" class="bg-teal-600 hover:bg-teal-700 text-white font-extrabold px-8 py-3.5 rounded-xl shadow-md transition w-full">
+                        +962 771128288
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-right">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div>
+                    <span class="text-2xl font-extrabold text-white">Nihao<span class="text-teal-500">Fun</span>.com</span>
+                    <p class="text-xs text-slate-500 mt-1" data-ar="جميع الحقوق محفوظة © 2026 - خدمات تصميم المواقع في الأردن" data-en="All Rights Reserved © 2026 - Jordan Web Development Services">جميع الحقوق محفوظة © 2026 - خدمات تصميم المواقع في الأردن</p>
+                </div>
+                <div class="flex items-center gap-4 text-sm font-semibold">
+                    <a href="https://wa.me/962771128288" target="_blank" class="hover:text-teal-400 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>+962771128288</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic 2-Step WhatsApp Interactive Modal -->
+    <div id="promoModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-fadeIn text-right" id="modalContainer">
+            
+            <!-- Close button -->
+            <button onclick="closePromoModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 text-xl font-bold">
+                ✕
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900" data-ar="صياغة طلبك عبر الواتساب" data-en="Craft Your WhatsApp Request">صياغة طلبك عبر الواتساب</h3>
+                    <p class="text-xs text-slate-500" data-ar="الخطوة 1 من 2: استعراض الرسالة الجذابة" data-en="Step 1 of 2: Review Generated Pitch">الخطوة 1 من 2: استعراض الرسالة الجذابة</p>
+                </div>
+            </div>
+
+            <!-- Target Sector Title -->
+            <div class="mb-4 bg-slate-100 p-3 rounded-xl border border-slate-200">
+                <span class="text-xs text-slate-500 block" data-ar="الخدمة المطلوبة:" data-en="Selected Service:">الخدمة المطلوبة:</span>
+                <span id="modalSectorName" class="font-bold text-slate-800 text-sm">طلب عام</span>
+            </div>
+
+            <!-- Generated Pitch Preview Box -->
+            <div class="mb-6">
+                <label class="block text-xs font-bold text-slate-700 mb-2" data-ar="الرسالة الترويجية المجهزة للرسالة (يمكنك تعديلها):" data-en="Arabic Promo Pitch (Editable):">
+                    الرسالة الترويجية المجهزة للرسالة (يمكنك تعديلها):
+                </label>
+                <textarea id="whatsappMessageText" rows="5" class="w-full text-sm p-3 border border-slate-300 rounded-xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 focus:outline-none text-slate-800 leading-relaxed"></textarea>
+            </div>
+
+            <!-- Step 2 WhatsApp Launch Button -->
+            <button onclick="sendToWhatsApp()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span data-ar="الخطوة 2: الانقال فوراً إلى واتساب 🚀" data-en="Step 2: Proceed to WhatsApp 🚀">الخطوة 2: الانتقال فوراً إلى واتساب 🚀</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="javascript:void(0)" onclick="openPromoModal('استفسار من الزر العائم')" class="fixed bottom-6 left-6 z-40 bg-teal-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-teal-600 hover:scale-110 transition duration-300" title="تواصل معنا عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const phone = "962771128288";
+        let currentLang = 'ar';
+
+        // Custom attractive Arabic pitches for Jordanians
+        function generateArabicPitch(sector) {
+            return `مرحباً فريق NihaoFun 👋\nأود الاستفسار عن تصميم موقع إلكتروني احترافي في الأردن.\n\n📌 *تفاصيل الطلب:* ${sector}\n💰 *الباقة المستهدفة:* باقة السنة الأولى (49 - 499 دينار أردني)\n\nيرجى التواصل معي لتزويدي بالتفاصيل وحجز اسم النطاق واستعراض النماذج. شكراً لكم!`;
+        }
+
+        // Open Modal (Click 1)
+        function openPromoModal(sector) {
+            document.getElementById('modalSectorName').innerText = sector;
+            document.getElementById('whatsappMessageText').value = generateArabicPitch(sector);
+            document.getElementById('promoModal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closePromoModal() {
+            document.getElementById('promoModal').classList.add('hidden');
+        }
+
+        // Send to WhatsApp (Click 2)
+        function sendToWhatsApp() {
+            const customMessage = document.getElementById('whatsappMessageText').value;
+            const encodedMsg = encodeURIComponent(customMessage);
+            const waUrl = `https://wa.me/${phone}?text=${encodedMsg}`;
+            window.open(waUrl, '_blank');
+            closePromoModal();
+        }
+
+        // Toggle Arabic / English
+        function toggleLanguage() {
+            const body = document.body;
+            const langBtn = document.getElementById('langBtn');
+            const allElements = document.querySelectorAll('[data-ar]');
+
+            if (currentLang === 'ar') {
+                currentLang = 'en';
+                body.setAttribute('dir', 'ltr');
+                body.classList.add('en-mode');
+                langBtn.innerText = 'العربية';
+
+                allElements.forEach(el => {
+                    if (el.getAttribute('data-en')) {
+                        el.innerText = el.getAttribute('data-en');
+                    }
+                });
+            } else {
+                currentLang = 'ar';
+                body.setAttribute('dir', 'rtl');
+                body.classList.remove('en-mode');
+                langBtn.innerText = 'English';
+
+                allElements.forEach(el => {
+                    if (el.getAttribute('data-ar')) {
+                        el.innerText = el.getAttribute('data-ar');
+                    }
+                });
+            }
+        }
+
+        // Modal backdrop click close
+        document.getElementById('promoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePromoModal();
+            }
+        });
+    </script>
+</body>
+</html>
