@@ -7,10 +7,14 @@
     <!-- SEO Optimization Meta Tags -->
     <title>NihaoFun - تصميم مواقع إلكترونية في الأردن | Web Design Jordan | 约旦网站建设</title>
     <meta name="description" content="أفضل خدمة تصميم مواقع إلكترونية للشركات والأفراد في الأردن. تسليم مواقع الأفراد في 48 ساعة، والشركات بجدول زمني مدروس. أسعار تبدأ من 49 دينار.">
-    <meta name="keywords" content="تصميم مواقع الأردن, انشاء موقع الكتروني عمان, برمجة مواقع, مواقع هدايا, Web Design Jordan, Website Development Amman, Create Website Jordan, 约旦建站, 约旦网站开发, 约旦做网站, NihaoFun">
+    <!-- Removed deprecated meta keywords as per optimization report -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="NihaoFun">
     
+    <!-- Favicon & Touch Icons (P0 Fix) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <!-- Canonical Link (SEO) -->
     <link rel="canonical" href="https://nihaofun.com/">
 
@@ -27,7 +31,7 @@
     <meta name="twitter:description" content="مواقع للأفراد (تسليم 48 ساعة) وللشركات. أسعار تبدأ من 49 دينار أردني فقط!">
     <meta name="twitter:image" content="https://nihaofun.com/logo.png">
 
-    <!-- Tailwind CSS CDN (For Production: Replace with compiled .css file) -->
+    <!-- Tailwind CSS CDN (Recommendation: Compile to static CSS for production) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Font Awesome Icons -->
@@ -104,7 +108,7 @@
                 </div>
             </div>
 
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-5 font-semibold text-sm">
                 <a href="#services" class="hover:text-teal-600 transition" data-ar="التخصصات" data-en="Sectors" data-zh="行业">التخصصات</a>
                 <a href="#personal" class="hover:text-teal-600 transition" data-ar="مواقع الهدايا" data-en="Gift Sites" data-zh="礼物网站">مواقع الهدايا</a>
@@ -113,7 +117,7 @@
                 <a href="#pricing" class="hover:text-teal-600 transition" data-ar="الأسعار" data-en="Pricing" data-zh="价格">الأسعار</a>
             </nav>
 
-            <!-- Language Switcher & WhatsApp CTA -->
+            <!-- Actions (Language, WhatsApp, Mobile Menu) -->
             <div class="flex items-center gap-2 sm:gap-3">
                 <!-- 3 Languages Selector -->
                 <div class="inline-flex rounded-lg bg-slate-100 p-1 border border-slate-200 text-xs font-bold">
@@ -127,7 +131,23 @@
                     <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
                     <span class="hidden sm:inline" data-ar="طلب مباشر" data-en="Order Now" data-zh="立即下单">طلب مباشر</span>
                 </button>
+
+                <!-- Mobile Menu Button (P1 Fix) -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-600 hover:text-teal-600 focus:outline-none text-2xl mx-1" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
+        </div>
+        
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-lg top-[80px]">
+            <nav class="flex flex-col px-6 py-4 space-y-4 font-semibold text-sm">
+                <a href="#services" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="التخصصات" data-en="Sectors" data-zh="行业">التخصصات</a>
+                <a href="#personal" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="مواقع الهدايا" data-en="Gift Sites" data-zh="礼物网站">مواقع الهدايا</a>
+                <a href="#comparison" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="لماذا نحن؟" data-en="Why Us?" data-zh="为何选择独立站">لماذا نحن؟</a>
+                <a href="#portfolio" class="hover:text-teal-600 transition text-rose-600 block" onclick="toggleMobileMenu()" data-ar="نماذج أعمالنا" data-en="Portfolio" data-zh="成功案例">نماذج أعمالنا</a>
+                <a href="#pricing" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="الأسعار" data-en="Pricing" data-zh="价格">الأسعار</a>
+            </nav>
         </div>
     </header>
 
@@ -166,7 +186,7 @@
         </div>
     </section>
 
-    <!-- Section 1: Website vs. Social Media Comparison (Generic Social Media focus) -->
+    <!-- Section 1: Website vs. Social Media Comparison -->
     <section id="comparison" class="py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -461,14 +481,18 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Portfolio Site 1 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col items-center text-center card-hover hover:border-teal-400 group">
-                    <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-4xl mb-5 shadow-inner">
-                        <i class="fa-solid fa-child-reaching" aria-hidden="true"></i>
+                    <!-- Image Placeholder (P2 Fix) -->
+                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 flex items-center justify-center text-slate-400 overflow-hidden relative border border-slate-200">
+                        <!-- Suggestion: Add actual WebP screenshot here -->
+                        <i class="fa-regular fa-image text-4xl"></i>
+                        <span class="absolute text-xs opacity-60 bottom-2" data-ar="مساحة مخصصة لصورة الموقع" data-en="Website Screenshot Area" data-zh="网站截图占位">مساحة مخصصة لصورة الموقع</span>
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Jordan Baby</h3>
                     <p class="text-slate-500 text-sm mb-6 w-full" data-ar="موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة." data-en="A dedicated site for children's products driving direct sales." data-zh="专注于儿童产品的独立站，直接带动销售与订单转化。">
                         موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة.
                     </p>
-                    <a href="http://www.jordanbaby.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <!-- HTTPS Link Update (P1 Fix) -->
+                    <a href="https://www.jordanbaby.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
                         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span style="font-family: 'Inter', sans-serif;">www.jordanbaby.com</span>
                     </a>
@@ -476,14 +500,18 @@
 
                 <!-- Portfolio Site 2 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col items-center text-center card-hover hover:border-teal-400 group">
-                    <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-4xl mb-5 shadow-inner">
-                        <i class="fa-solid fa-shapes" aria-hidden="true"></i>
+                    <!-- Image Placeholder (P2 Fix) -->
+                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 flex items-center justify-center text-slate-400 overflow-hidden relative border border-slate-200">
+                        <!-- Suggestion: Add actual WebP screenshot here -->
+                        <i class="fa-regular fa-image text-4xl"></i>
+                        <span class="absolute text-xs opacity-60 bottom-2" data-ar="مساحة مخصصة لصورة الموقع" data-en="Website Screenshot Area" data-zh="网站截图占位">مساحة مخصصة لصورة الموقع</span>
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Nihao Play</h3>
                     <p class="text-slate-500 text-sm mb-6 w-full" data-ar="منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة." data-en="An interactive educational platform generating steady interest and requests." data-zh="互动式教育与游乐平台，成功吸引广泛关注并获取持续订单。">
                         منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة.
                     </p>
-                    <a href="http://www.nihaoplay.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
+                    <!-- HTTPS Link Update (P1 Fix) -->
+                    <a href="https://www.nihaoplay.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
                         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span style="font-family: 'Inter', sans-serif;">www.nihaoplay.com</span>
                     </a>
@@ -510,11 +538,23 @@
                 </p>
             </div>
             
-            <!-- Premium Email Button -->
-            <a href="mailto:sinoarabiaofficial@gmail.com" class="inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-full premium-gradient text-teal-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm group" aria-label="Send Email">
+            <!-- Premium Email Button (Updated Email per request) -->
+            <a href="mailto:nihaofun.support@gmail.com" class="inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-full premium-gradient text-teal-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm group" aria-label="Send Email">
                 <i class="fa-solid fa-envelope text-lg group-hover:animate-pulse" aria-hidden="true"></i>
-                <span class="font-bold tracking-wider text-sm sm:text-base font-sans" dir="ltr">sinoarabiaofficial@gmail.com</span>
+                <span class="font-bold tracking-wider text-sm sm:text-base font-sans" dir="ltr">nihaofun.support@gmail.com</span>
             </a>
+
+            <!-- Contact & Location Info Added (P2 Fix) -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8 text-sm mt-2 border-t border-slate-800/80 pt-6">
+                <div class="flex items-center gap-2 text-slate-400">
+                    <i class="fa-brands fa-whatsapp text-teal-500 text-lg"></i>
+                    <span dir="ltr" class="font-bold">+962 7 7112 8288</span>
+                </div>
+                <div class="flex items-center gap-2 text-slate-400">
+                    <i class="fa-solid fa-location-dot text-teal-500 text-lg"></i>
+                    <span data-ar="عمان، الأردن" data-en="Amman, Jordan" data-zh="约旦，安曼">عمان، الأردن</span>
+                </div>
+            </div>
 
         </div>
     </footer>
@@ -554,15 +594,21 @@
         </div>
     </div>
 
-    <!-- Floating Icon-Only WhatsApp Button -->
-    <a href="javascript:void(0)" onclick="openPromoModal('طلب من الزر العائم')" class="fixed bottom-6 left-6 z-40 bg-teal-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-teal-600 hover:scale-110 transition duration-300" title="WhatsApp Direct Order" aria-label="Order via WhatsApp">
+    <!-- Floating Icon-Only WhatsApp Button (P1 Fix: Changed to semantic <button>) -->
+    <button onclick="openPromoModal('طلب من الزر العائم')" class="fixed bottom-6 left-6 z-40 bg-teal-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-teal-600 hover:scale-110 transition duration-300" title="WhatsApp Direct Order" aria-label="Order via WhatsApp">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-    </a>
+    </button>
 
     <!-- JavaScript Handling Languages and WhatsApp Direct Flow -->
     <script>
         const phone = "962771128288"; 
         let currentLang = 'ar';
+
+        // Mobile Menu Toggle Function (P1 Fix)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
 
         function generatePitch(sector) {
             if (currentLang === 'zh') {
@@ -612,7 +658,7 @@ Please reach out to discuss details. Thanks!`;
             closePromoModal();
         }
 
-        // Language Toggle Function (Securely parsing innerHTML for no-wrap spans)
+        // Language Toggle Function
         function setLanguage(lang) {
             currentLang = lang;
             const html = document.documentElement;
