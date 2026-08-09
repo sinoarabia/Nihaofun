@@ -30,9 +30,7 @@
     <meta name="twitter:description" content="مواقع للأفراد (تسليم 48 ساعة) وللشركات. أسعار تبدأ من 49 دينار أردني فقط!">
     <meta name="twitter:image" content="https://nihaofun.com/logo.png">
 
-    <!-- Tailwind CSS CDN 
-         * For Production: Recommend compiling via Tailwind CLI to reduce 400KB blocking JS * 
-    -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Font Awesome Icons -->
@@ -188,7 +186,7 @@
         </div>
     </section>
 
-    <!-- Section 1: Website vs. Social Media Comparison (Added scroll-mt-20) -->
+    <!-- Section 1: Website vs. Social Media Comparison -->
     <section id="comparison" class="py-20 bg-slate-900 text-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -279,7 +277,7 @@
         </div>
     </section>
 
-    <!-- Section 2: Personal & Gift Websites (Added scroll-mt-20) -->
+    <!-- Section 2: Personal & Gift Websites -->
     <section id="personal" class="py-20 bg-slate-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -343,7 +341,7 @@
         </div>
     </section>
 
-    <!-- Section 3: Top 20 Jordan Business Sectors (Added scroll-mt-20) -->
+    <!-- Section 3: Top 20 Jordan Business Sectors -->
     <section id="services" class="py-20 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -356,8 +354,6 @@
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                <!-- 20 Sector Cards Rendered as Static HTML (A11y + SEO safe, no more document.write blocking) -->
-                
                 <button type="button" onclick="openPromoModal({ar: 'المطاعم والكافيهات', en: 'Restaurants & Cafes', zh: '餐饮与咖啡馆'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
@@ -521,7 +517,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section (Added scroll-mt-20) -->
+    <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-slate-100 border-t border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -534,7 +530,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Year 1 (Added overflow-hidden to clip the absolute ribbon properly) -->
+                <!-- Year 1 -->
                 <div class="bg-white rounded-2xl p-8 border-2 border-teal-500 shadow-xl relative card-hover overflow-hidden">
                     <span class="absolute -left-12 top-6 bg-teal-500 text-white text-xs font-bold py-1 px-12 -rotate-45" data-ar="الأكثر طلباً" data-en="Most Popular" data-zh="热门首选">الأكثر طلباً</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>" data-en="First Year Setup <span class='text-teal-600 block text-lg mt-1'>(Creation Fee + 1st Year FREE!)</span>" data-zh="首年建站方案 <span class='text-teal-600 block text-lg mt-1'>(仅收制作费 + 首年免服务费!)</span>">
@@ -561,7 +557,6 @@
                 <!-- Year 2 Renewal -->
                 <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-md card-hover flex flex-col justify-between">
                     <div>
-                        <!-- Consistent translated span -->
                         <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>" data-en="Annual Renewal <span class='text-slate-500 block text-lg mt-1'>(From 2nd Year Onwards)</span>" data-zh="次年起续费服务 <span class='text-slate-500 block text-lg mt-1'>(次年起适用)</span>">
                             التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>
                         </h3>
@@ -587,7 +582,7 @@
         </div>
     </section>
 
-    <!-- Success Stories (Portfolio) (Added scroll-mt-20) -->
+    <!-- Success Stories (Portfolio) -->
     <section id="portfolio" class="py-20 bg-white border-t border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -603,11 +598,10 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Portfolio Site 1 -->
+                <!-- Portfolio Site 1 (Jordan Baby / Right Side on Screen) -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col items-center text-center card-hover hover:border-teal-400 group">
-                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 flex items-center justify-center text-slate-400 overflow-hidden relative border border-slate-200">
-                        <i class="fa-regular fa-image text-4xl"></i>
-                        <span class="absolute text-xs opacity-60 bottom-2" data-ar="مساحة مخصصة لصورة الموقع (WebP)" data-en="Website Screenshot Area (WebP)" data-zh="网站截图占位 (WebP格式)">مساحة مخصصة لصورة الموقع (WebP)</span>
+                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 overflow-hidden relative border border-slate-200">
+                        <img src="T2.png" alt="Jordan Baby Website" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Jordan Baby</h3>
                     <p class="text-slate-500 text-sm mb-6 w-full" data-ar="موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة." data-en="A dedicated site for children's products driving direct sales." data-zh="专注于儿童产品的独立站，直接带动销售与订单转化。">
@@ -619,11 +613,10 @@
                     </a>
                 </div>
 
-                <!-- Portfolio Site 2 -->
+                <!-- Portfolio Site 2 (Nihao Play / Left Side on Screen) -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col items-center text-center card-hover hover:border-teal-400 group">
-                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 flex items-center justify-center text-slate-400 overflow-hidden relative border border-slate-200">
-                        <i class="fa-regular fa-image text-4xl"></i>
-                        <span class="absolute text-xs opacity-60 bottom-2" data-ar="مساحة مخصصة لصورة الموقع (WebP)" data-en="Website Screenshot Area (WebP)" data-zh="网站截图占位 (WebP格式)">مساحة مخصصة لصورة الموقع (WebP)</span>
+                    <div class="w-full h-48 bg-slate-200 rounded-xl mb-6 overflow-hidden relative border border-slate-200">
+                        <img src="T1.png" alt="Nihao Play Website" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Nihao Play</h3>
                     <p class="text-slate-500 text-sm mb-6 w-full" data-ar="منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة." data-en="An interactive educational platform generating steady interest and requests." data-zh="互动式教育与游乐平台，成功吸引广泛关注并获取持续订单。">
@@ -656,13 +649,19 @@
                 </p>
             </div>
             
-            <!-- Premium Email Button -->
-            <a href="mailto:nihaofun.support@gmail.com" class="inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-full premium-gradient text-teal-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm group" aria-label="Send Email">
+            <!-- Super Email Button (Click to copy, Double click to mailto) -->
+            <button id="superEmailBtn" onclick="handleEmailClick(event)" class="relative inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-full premium-gradient text-teal-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-sm group focus:outline-none" aria-label="Email Address">
                 <i class="fa-solid fa-envelope text-lg group-hover:animate-pulse" aria-hidden="true"></i>
                 <span class="font-bold tracking-wider text-sm sm:text-base font-sans" dir="ltr">nihaofun.support@gmail.com</span>
-            </a>
+                
+                <!-- Magic Tooltip -->
+                <span id="emailTooltip" class="absolute -top-12 inset-x-0 mx-auto w-max bg-slate-800 text-white text-xs py-1.5 px-3 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none shadow-lg flex flex-col items-center justify-center">
+                    <span id="emailTooltipText" data-ar="تم النسخ! انقر مرتين للمراسلة" data-en="Copied! Double click to compose" data-zh="已复制！双击直接发邮件">تم النسخ! انقر مرتين للمراسلة</span>
+                    <div class="absolute -bottom-1 w-2 h-2 bg-slate-800 rotate-45"></div>
+                </span>
+            </button>
 
-            <!-- Contact & Location Info Added -->
+            <!-- Contact & Location Info -->
             <div class="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8 text-sm mt-2 border-t border-slate-800/80 pt-6">
                 <div class="flex items-center gap-2 text-slate-400">
                     <i class="fa-brands fa-whatsapp text-teal-500 text-lg"></i>
@@ -677,12 +676,10 @@
         </div>
     </footer>
 
-    <!-- Interactive Modal (Added A11y role="dialog", dynamic text rendering, and auto-flip logical properties) -->
+    <!-- Interactive Modal -->
     <div id="promoModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <!-- Replaced text-right with text-start for automatic LTR/RTL flipping -->
         <div role="dialog" aria-modal="true" aria-labelledby="modalSectorName" class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative text-start" id="modalContainer">
             
-            <!-- Replaced absolute left-4 with absolute end-4 for automatic side flipping -->
             <button onclick="closePromoModal()" class="absolute top-4 end-4 text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="Close Modal">✕</button>
 
             <div class="flex items-center gap-3 mb-4">
@@ -715,7 +712,7 @@
         </div>
     </div>
 
-    <!-- Floating Icon-Only WhatsApp Button (Replaced absolute left-6 with absolute end-6) -->
+    <!-- Floating Icon-Only WhatsApp Button -->
     <button onclick="openPromoModal({ar: 'طلب عبر الزر العائم', en: 'Quick Action Order', zh: '快捷浮窗下单'})" class="fixed bottom-6 end-6 z-40 bg-teal-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:bg-teal-600 hover:scale-110 transition duration-300 focus:outline-none" title="WhatsApp Direct Order" aria-label="Order via WhatsApp">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </button>
@@ -724,9 +721,8 @@
     <script>
         const phone = "962771128288"; 
         let currentLang = 'ar';
-        let currentSectorObj = null; // Store currently selected sector object
+        let currentSectorObj = null; 
 
-        // Wait for DOM to Load - Language Initialization
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('lang');
             const browserLang = navigator.language.slice(0, 2);
@@ -741,7 +737,6 @@
             setLanguage(initLang);
         });
 
-        // Mobile Menu Toggle Function
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
@@ -778,10 +773,8 @@ Please reach out to discuss details. Thanks!`;
             }
         }
 
-        // Render Dynamic Modal Content
         function renderModalContent() {
             if (!currentSectorObj) return;
-            // Get the translated string based on current language state
             const sectorName = currentSectorObj[currentLang] || currentSectorObj['ar'];
             document.getElementById('modalSectorName').innerText = sectorName;
             document.getElementById('whatsappMessageText').value = generatePitch(sectorName);
@@ -805,16 +798,55 @@ Please reach out to discuss details. Thanks!`;
             closePromoModal();
         }
 
-        // Language Toggle Function
+        // --- NEW: Magic Email Button Logic ---
+        let emailClickCount = 0;
+        let emailClickTimer = null;
+
+        function handleEmailClick(e) {
+            e.preventDefault();
+            emailClickCount++;
+            
+            const tooltip = document.getElementById('emailTooltip');
+
+            if (emailClickCount === 1) {
+                // Click 1: Copy to clipboard
+                navigator.clipboard.writeText("nihaofun.support@gmail.com").then(() => {
+                    tooltip.classList.remove('opacity-0');
+                    // Reset counter and hide tooltip after 2.5s
+                    emailClickTimer = setTimeout(() => {
+                        emailClickCount = 0;
+                        tooltip.classList.add('opacity-0');
+                    }, 2500);
+                }).catch(err => console.error('Copy failed', err));
+                
+            } else if (emailClickCount === 2) {
+                // Click 2: Clear timer and launch Mail App with pre-filled inquiry template
+                clearTimeout(emailClickTimer);
+                emailClickCount = 0;
+                tooltip.classList.add('opacity-0');
+                
+                let subject = encodeURIComponent(
+                    currentLang === 'zh' ? "网站建设咨询 - NihaoFun" : 
+                    (currentLang === 'en' ? "Web Design Inquiry - NihaoFun" : "استفسار عن تصميم موقع - NihaoFun")
+                );
+                let body = encodeURIComponent(
+                    currentLang === 'zh' ? "你好 NihaoFun 团队，\n\n我对你们的建站服务非常感兴趣，希望能了解更多细节。\n\n我的主要需求是：" : 
+                    (currentLang === 'en' ? "Hello NihaoFun Team,\n\nI am very interested in your web design services.\n\nMy primary requirements are:" : 
+                    "مرحباً فريق NihaoFun،\n\nأنا مهتم جداً بخدمات تصميم المواقع الخاصة بكم.\n\nمتطلباتي الأساسية هي:")
+                );
+                
+                window.location.href = `mailto:nihaofun.support@gmail.com?subject=${subject}&body=${body}`;
+            }
+        }
+        // -------------------------------------
+
         function setLanguage(lang) {
             currentLang = lang;
             const html = document.documentElement;
             const body = document.body;
 
-            // Save to localStorage
             localStorage.setItem('lang', lang);
 
-            // Update Page Title
             const titles = {
                 'ar': 'NihaoFun - تصميم مواقع إلكترونية في الأردن',
                 'en': 'NihaoFun - Web Design Jordan',
@@ -822,7 +854,6 @@ Please reach out to discuss details. Thanks!`;
             };
             document.title = titles[lang] || titles['ar'];
 
-            // Update Active Button Style
             ['ar', 'en', 'zh'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if (l === lang) {
@@ -842,7 +873,6 @@ Please reach out to discuss details. Thanks!`;
                 body.classList.add('ltr-mode');
             }
 
-            // Translate Text Elements
             document.querySelectorAll(`[data-${lang}]`).forEach(el => {
                 const text = el.getAttribute(`data-${lang}`);
                 if (text) {
@@ -850,13 +880,11 @@ Please reach out to discuss details. Thanks!`;
                 }
             });
 
-            // Refresh Modal if open
             if (!document.getElementById('promoModal').classList.contains('hidden')) {
                 renderModalContent();
             }
         }
 
-        // Modal Close Listeners (Backdrop click and Escape Key)
         document.getElementById('promoModal').addEventListener('click', function(e) {
             if (e.target === this) closePromoModal();
         });
