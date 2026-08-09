@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Logo - NihaoFun</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .logo-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 70px 120px;
+            border-radius: 40px;
+            /* 3D 底座质感 */
+            box-shadow: 30px 30px 60px #0a0f1c, 
+                       -30px -30px 60px #1a253a, 
+                       inset 2px 2px 5px rgba(255,255,255,0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .graphic {
+            /* 3D 悬浮发光效果 */
+            filter: drop-shadow(0px 20px 15px rgba(13, 148, 136, 0.5)) 
+                    drop-shadow(0px 5px 5px rgba(0,0,0,0.6));
+            margin-bottom: 40px;
+        }
+        .brand-name {
+            font-size: 90px;
+            font-weight: 900;
+            color: #ffffff;
+            /* 3D 文字物理厚度挤压效果 */
+            text-shadow:
+                1px 1px 0px #cbd5e1,
+                2px 2px 0px #94a3b8,
+                3px 3px 0px #64748b,
+                4px 4px 0px #475569,
+                5px 5px 0px #334155,
+                6px 6px 20px rgba(0,0,0,0.9);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .brand-name span {
+            color: #14b8a6;
+            /* 青色 3D 厚度 */
+            text-shadow:
+                1px 1px 0px #0d9488,
+                2px 2px 0px #0f766e,
+                3px 3px 0px #115e59,
+                4px 4px 0px #134e4a,
+                5px 5px 0px #042f2e,
+                6px 6px 20px rgba(0,0,0,0.9);
+        }
+        .tagline {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-card">
+        <div class="graphic">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="300" height="160">
+                <path d="M40,40 L0,80 L40,120" fill="none" stroke="#14b8a6" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M260,40 L300,80 L260,120" fill="none" stroke="#14b8a6" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M100,140 L100,80 C100,40 120,10 150,10 C180,10 200,40 200,80 L200,140" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                <circle cx="150" cy="65" r="16" fill="#14b8a6"/>
+            </svg>
+        </div>
+        <h1 class="brand-name">Nihao<span>Fun</span></h1>
+        <div class="tagline">Web Design Jordan</div>
+    </div>
+</body>
+</html>
