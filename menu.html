@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطلبات - 菜单预订</title>
+    <style>
+        /* 页面整体背景匹配深色风格 */
+        body {
+            background-color: #121212; 
+            font-family: 'Avenir Arabic', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 蓝色菜单展示区 */
+        .menu-container {
+            background-color: #6ca1b6; 
+            border-radius: 15px;
+            padding: 30px 20px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .category-title {
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+            padding-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* 菜品按钮样式 */
+        .menu-btn {
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 10px 18px;
+            margin: 6px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .menu-btn:hover {
+            background-color: #ffffff;
+            color: #6ca1b6;
+            transform: translateY(-2px);
+        }
+
+        /* ================= 数量输入弹窗样式 ================= */
+        .modal-overlay {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+        .modal-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+            direction: rtl;
+        }
+        .modal-title {
+            color: #333333;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .modal-subtitle {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .qty-input {
+            width: 80px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #6ca1b6;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        .action-btn {
+            background-color: #6ca1b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .cancel-btn {
+            background-color: #cccccc;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <h1 style="color: white; margin-top: 0;">قائمة الطلبات</h1>
+    
+    <!-- 咖啡与饮品区 -->
+    <div class="category-title">المشروبات (咖啡与饮品)</div>
+    <button class="menu-btn" onclick="openQtyPrompt('قهوة أمريكية', '美式咖啡')">قهوة أمريكية</button>
+    <button class="menu-btn" onclick="openQtyPrompt('لاتيه', '拿铁咖啡')">لاتيه</button>
+    <button class="menu-btn" onclick="openQtyPrompt('كابتشينو', '卡布奇诺')">كابتشينو</button>
+    <button class="menu-btn" onclick="openQtyPrompt('شاي ساخن', '热茶')">شاي ساخن</button>
+    <button class="menu-btn" onclick="openQtyPrompt('عصائر سموثي', '冰沙')">عصائر سموثي</button>
+
+    <!-- 主菜单区 -->
+    <div class="category-title">الأطباق (餐点)</div>
+    <button class="menu-btn" onclick="openQtyPrompt('الأطباق الإيطالية', '意大利菜')">الأطباق الإيطالية</button>
+    <button class="menu-btn" onclick="openQtyPrompt('المعجنات', '糕点烘焙')">المعجنات</button>
+    <button class="menu-btn" onclick="openQtyPrompt('مقبلات ساخنة', '热开胃菜')">مقبلات ساخنة</button>
+    <button class="menu-btn" onclick="openQtyPrompt('مقبلات باردة', '冷开胃菜')">مقبلات باردة</button>
+    <button class="menu-btn" onclick="openQtyPrompt('السلطات', '沙拉')">السلطات</button>
+    <button class="menu-btn" onclick="openQtyPrompt('مشاوي', '烤肉')">مشاوي</button>
+    <button class="menu-btn" onclick="openQtyPrompt('الحلويات', '甜点')">الحلويات</button>
+</div>
+
+<!-- 自定义数量输入弹窗 -->
+<div class="modal-overlay" id="qtyModal">
+    <div class="modal-box">
+        <h3 class="modal-title">تحديد الكمية</h3>
+        <p class="modal-subtitle">يرجى إدخال العدد المطلوب (请输入需要的数量)</p>
+        
+        <!-- 默认数量为 1，用户可点击修改 -->
+        <input type="number" id="qtyInput" class="qty-input" value="1" min="1">
+        
+        <br>
+        <button class="action-btn" onclick="submitOrder()">تأكيد (确认)</button>
+        <button class="action-btn cancel-btn" onclick="closeModal()">إلغاء (取消)</button>
+    </div>
+</div>
+
+<script>
+    // 用于临时存储当前点击的菜品
+    var currentArName = "";
+    var currentZhName = "";
+
+    // 1. 打开数量输入弹窗
+    function openQtyPrompt(arName, zhName) {
+        currentArName = arName;
+        currentZhName = zhName;
+        // 每次打开弹窗时，把输入框数量重置为 1
+        document.getElementById('qtyInput').value = "1";
+        // 显示弹窗
+        document.getElementById('qtyModal').style.display = 'flex';
+    }
+
+    // 2. 关闭弹窗
+    function closeModal() {
+        document.getElementById('qtyModal').style.display = 'none';
+    }
+
+    // 3. 确认提交订单到 WhatsApp
+    function submitOrder() {
+        var qty = document.getElementById('qtyInput').value;
+        
+        // 如果客户清空了输入框，或者输入了小于1的数字，强制改为1
+        if (!qty || qty < 1) {
+            qty = 1;
+        }
+
+        var phone = "962793040501"; 
+        
+        // 生成带有客户指定数量的订单话术
+        var message = "مرحباً، أريد طلب " + qty + " " + currentArName + ".\n\n(你好，我需要 " + qty + " 个/杯 【" + currentZhName + "】。其他的不改变)";
+        
+        var whatsappUrl = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+        
+        // 关闭弹窗并跳转到 WhatsApp
+        closeModal();
+        window.open(whatsappUrl, '_blank');
+    }
+</script>
+
+</body>
+</html>
