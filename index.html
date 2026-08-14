@@ -155,7 +155,7 @@
     <section class="gradient-bg text-white py-20 lg:py-24 relative overflow-hidden">
         <!-- New Dazzling Gift Badge (Special Offer 99 JD) -->
         <div class="absolute top-6 right-2 sm:top-12 sm:right-10 z-30 animate-bounce">
-            <div class="bg-gradient-to-br from-yellow-300 via-amber-400 to-yellow-500 text-slate-900 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-[0_0_40px_rgba(251,191,36,0.8)] border-2 border-yellow-100 flex items-center gap-2 sm:gap-3 transform hover:scale-110 transition-transform duration-300 backdrop-blur-md cursor-pointer">
+            <div onclick="openPromoModal({ar: 'استرداد عرض 99 دينار', en: 'Claim 99 JD Offer', zh: '兑换 99 JD 特惠礼包'})" class="bg-gradient-to-br from-yellow-300 via-amber-400 to-yellow-500 text-slate-900 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-[0_0_40px_rgba(251,191,36,0.8)] border-2 border-yellow-100 flex items-center gap-2 sm:gap-3 transform hover:scale-110 transition-transform duration-300 backdrop-blur-md cursor-pointer">
                 <div class="text-3xl sm:text-4xl animate-pulse">🎁</div>
                 <div class="flex flex-col text-center justify-center">
                     <span class="font-black text-xs sm:text-sm text-rose-700 uppercase tracking-widest drop-shadow-sm" data-ar="عرض حصري!" data-en="Special Offer!" data-zh="限时大礼包！">عرض حصري!</span>
@@ -648,7 +648,7 @@
                 <!-- 新增的金黄色跳转按钮（适配电脑和手机网页） -->
                 <a href="KEYIRBID.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 text-base">
                     <i class="fa-solid fa-mug-hot text-xl" aria-hidden="true"></i>
-                    <span>تجربة نموذج مطعم وكافيه (طلب مباشر)</span>
+                    <span data-ar="تجربة نموذج مطعم وكافيه (طلب مباشر)" data-en="Live Demo: Cafe & Restaurant" data-zh="沉浸式体验：餐厅与咖啡馆 Demo">تجربة نموذج مطعم وكافيه (طلب مباشر)</span>
                 </a>
             </div>
         </div>
@@ -765,7 +765,7 @@
                 return `你好！我希望在 NihaoFun 咨询/下单搭建我的专属网站。
 
 📌 目标项目: ${sectorName}
-💰 首年预算: 149 JD 起 (首年免服务费!)
+💰 首年预算: 标准价 149 JD (申请 99 JD 特惠大礼包！)
 ⚡ 需求: 让我的产品成为唯一焦点，直接拿单
 
 请尽快回复我，谢谢！`;
@@ -774,7 +774,7 @@
 I would like to inquire/order my own dedicated website in Jordan.
 
 📌 Service: ${sectorName}
-💰 Budget: Starting at 149 JOD (1st Year FREE!)
+💰 Budget: Standard 149 JOD (Claiming the 99 JD Special Offer!)
 ⚡ Goal: I want my products to be the absolute star to get direct orders!
 
 Please reach out to discuss details. Thanks!`;
@@ -783,7 +783,7 @@ Please reach out to discuss details. Thanks!`;
 أود طلب مساحتي الخاصة على الإنترنت في الأردن.
 
 📌 نوع الطلب: ${sectorName}
-💰 الباقة: يبدأ من 149 دينار رسوم تأسيس (سنة أولى مجاناً!)
+💰 الباقة: السعر الأساسي 149 دينار (أرغب بالاستفادة من عرض الـ 99 دينار!)
 ⚡ هدفي: أن تكون منتجاتي النجم الأبرز لتحقيق طلبات مباشرة!
 
 يرجى التواصل معي للتفاصيل والتنفيذ. شكراً لكم!`;
