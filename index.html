@@ -748,8 +748,15 @@
         let currentLang = 'ar';
         let currentSectorObj = null; 
 
+        
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('lang');
+            let savedLang = null;
+            try {
+                savedLang = localStorage.getItem('lang');
+            } catch (e) {
+                console.warn("localStorage not available");
+            }
+            
             const browserLang = navigator.language.slice(0, 2);
             let initLang = 'ar';
             
@@ -770,31 +777,11 @@
         // WhatsApp Text Generation 
         function generatePitch(sectorName) {
             if (currentLang === 'zh') {
-                return `你好！我希望在 NihaoFun 咨询/下单搭建我的专属网站。
-
-📌 目标项目: ${sectorName}
-💰 首年预算: 标准价 149 JD (申请 99 JD 特惠大礼包！)
-⚡ 需求: 让我的产品成为唯一焦点，直接拿单
-
-请尽快回复我，谢谢！`;
+                return `你好！我希望在 NihaoFun 咨询/下单搭建我的专属网站。\n\n📌 目标项目: ${sectorName}\n💰 首年预算: 标准价 149 JD (申请 99 JD 特惠大礼包！)\n⚡ 需求: 让我的产品成为唯一焦点，直接拿单\n\n请尽快回复我，谢谢！`;
             } else if (currentLang === 'en') {
-                return `Hello NihaoFun Team! 👋
-I would like to inquire/order my own dedicated website in Jordan.
-
-📌 Service: ${sectorName}
-💰 Budget: Standard 149 JOD (Claiming the 99 JD Special Offer!)
-⚡ Goal: I want my products to be the absolute star to get direct orders!
-
-Please reach out to discuss details. Thanks!`;
+                return `Hello NihaoFun Team! 👋\nI would like to inquire/order my own dedicated website in Jordan.\n\n📌 Service: ${sectorName}\n💰 Budget: Standard 149 JOD (Claiming the 99 JD Special Offer!)\n⚡ Goal: I want my products to be the absolute star to get direct orders!\n\nPlease reach out to discuss details. Thanks!`;
             } else {
-                return `مرحباً فريق NihaoFun 👋
-أود طلب مساحتي الخاصة على الإنترنت في الأردن.
-
-📌 نوع الطلب: ${sectorName}
-💰 الباقة: السعر الأساسي 149 دينار (أرغب بالاستفادة من عرض الـ 99 دينار!)
-⚡ هدفي: أن تكون منتجاتي النجم الأبرز لتحقيق طلبات مباشرة!
-
-يرجى التواصل معي للتفاصيل والتنفيذ. شكراً لكم!`;
+                return `مرحباً فريق NihaoFun 👋\nأود طلب مساحتي الخاصة على الإنترنت في الأردن.\n\n📌 نوع الطلب: ${sectorName}\n💰 الباقة: السعر الأساسي 149 دينار (أرغب بالاستفادة من عرض الـ 99 دينار!)\n⚡ هدفي: أن تكون منتجاتي النجم الأبرز لتحقيق طلبات مباشرة!\n\nيرجى التواصل معي للتفاصيل والتنفيذ. شكراً لكم!`;
             }
         }
 
@@ -855,21 +842,9 @@ Please reach out to discuss details. Thanks!`;
                     (currentLang === 'en' ? "Web Design Inquiry - NihaoFun" : "استفسار عن تصميم موقع - NihaoFun")
                 );
                 let body = encodeURIComponent(
-                    currentLang === 'zh' ? "你好 NihaoFun 团队，
-
-我对你们的建站服务非常感兴趣，希望能了解更多细节。
-
-我的主要需求是：" : 
-                    (currentLang === 'en' ? "Hello NihaoFun Team,
-
-I am very interested in your web design services.
-
-My primary requirements are:" : 
-                    "مرحباً فريق NihaoFun،
-
-أنا مهتم جداً بخدمات تصميم المواقع الخاصة بكم.
-
-متطلباتي الأساسية هي:")
+                    currentLang === 'zh' ? "你好 NihaoFun 团队，\n\n我对你们的建站服务非常感兴趣，希望能了解更多细节。\n\n我的主要需求是：" : 
+                    (currentLang === 'en' ? "Hello NihaoFun Team,\n\nI am very interested in your web design services.\n\nMy primary requirements are:" : 
+                    "مرحباً فريق NihaoFun،\n\nأنا مهتم جداً بخدمات تصميم المواقع الخاصة بكم.\n\nمتطلباتي الأساسية هي:")
                 );
                 
                 window.location.href = `mailto:nihaofun.support@gmail.com?subject=${subject}&body=${body}`;
@@ -879,10 +854,14 @@ My primary requirements are:" :
 
         function setLanguage(lang) {
             currentLang = lang;
-            const html = document.documentElement;
-            const body = document.body;
+            const htmlNode = document.documentElement;
+            const bodyNode = document.body;
 
-            localStorage.setItem('lang', lang);
+            try {
+                localStorage.setItem('lang', lang);
+            } catch (e) {
+                console.warn("localStorage not available");
+            }
 
             const titles = {
                 'ar': 'NihaoFun - تصميم مواقع إلكترونية في الأردن',
@@ -893,21 +872,23 @@ My primary requirements are:" :
 
             ['ar', 'en', 'zh'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
-                if (l === lang) {
-                    btn.className = "px-2 py-1 rounded-md transition bg-teal-600 text-white";
-                } else {
-                    btn.className = "px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900";
+                if (btn) {
+                    if (l === lang) {
+                        btn.className = "px-2 py-1 rounded-md transition bg-teal-600 text-white";
+                    } else {
+                        btn.className = "px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900";
+                    }
                 }
             });
 
             if (lang === 'ar') {
-                html.setAttribute('dir', 'rtl');
-                html.setAttribute('lang', 'ar');
-                body.classList.remove('ltr-mode');
+                htmlNode.setAttribute('dir', 'rtl');
+                htmlNode.setAttribute('lang', 'ar');
+                bodyNode.classList.remove('ltr-mode');
             } else {
-                html.setAttribute('dir', 'ltr');
-                html.setAttribute('lang', lang);
-                body.classList.add('ltr-mode');
+                htmlNode.setAttribute('dir', 'ltr');
+                htmlNode.setAttribute('lang', lang);
+                bodyNode.classList.add('ltr-mode');
             }
 
             document.querySelectorAll(`[data-${lang}]`).forEach(el => {
@@ -917,20 +898,25 @@ My primary requirements are:" :
                 }
             });
 
-            if (!document.getElementById('promoModal').classList.contains('hidden')) {
+            const modal = document.getElementById('promoModal');
+            if (modal && !modal.classList.contains('hidden')) {
                 renderModalContent();
             }
         }
 
-        document.getElementById('promoModal').addEventListener('click', function(e) {
-            if (e.target === this) closePromoModal();
-        });
+        const promoModal = document.getElementById('promoModal');
+        if(promoModal) {
+            promoModal.addEventListener('click', function(e) {
+                if (e.target === this) closePromoModal();
+            });
+        }
         
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !document.getElementById('promoModal').classList.contains('hidden')) {
+            const modal = document.getElementById('promoModal');
+            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
                 closePromoModal();
             }
         });
-    </script>
+</script>
 </body>
 </html>
