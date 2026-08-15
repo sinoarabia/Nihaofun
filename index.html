@@ -105,7 +105,31 @@
         .premium-gradient:hover {
             background: linear-gradient(135deg, #0d9488 0%, #d97706 100%);
         }
-    </style>
+    
+        /* Ribbon Styles for Pricing Cards */
+        .corner-ribbon {
+            position: absolute;
+            top: 1.5rem;
+            width: 12rem;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.375rem 0;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        html[dir="ltr"] .corner-ribbon {
+            left: -3rem;
+            transform: rotate(-45deg);
+        }
+        html[dir="rtl"] .corner-ribbon {
+            right: -3rem;
+            transform: rotate(45deg);
+        }
+        .corner-ribbon.teal { background-color: #0d9488; }
+        .corner-ribbon.rose { background-color: #f43f5e; }
+</style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
 
@@ -559,7 +583,7 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Year 1 -->
                 <div class="bg-white rounded-2xl p-8 border-2 border-teal-500 shadow-xl relative card-hover overflow-hidden">
-                    <span class="absolute -start-12 top-6 bg-teal-500 text-white text-xs font-bold py-1 px-12 -rotate-45" data-ar="الأكثر طلباً" data-en="Most Popular" data-ru="Популярное" data-ja="一番人気" data-zh="热门首选">الأكثر طلباً</span>
+                    <div class="corner-ribbon teal" data-ar="الأكثر طلباً" data-en="Most Popular" data-ru="Популярное" data-ja="一番人気" data-zh="热门首选">الأكثر طلباً</div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>" data-en="First Year Setup <span class='text-teal-600 block text-lg mt-1'>(Creation Fee + 1st Year FREE!)</span>" data-ru="Запуск за первый год <span class='text-teal-600 block text-lg mt-1'>(Создание + 1 год БЕСПЛАТНО!)</span>" data-ja="初年度セットアップ <span class='text-teal-600 block text-lg mt-1'>(制作費のみ ＋ 初年度無料！)</span>" data-zh="首年建站方案 <span class='text-teal-600 block text-lg mt-1'>(仅收制作费 + 首年免服务费!)</span>">
                         باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>
                     </h3>
@@ -582,7 +606,8 @@
                 </div>
 
                 <!-- Year 2 Renewal -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-md card-hover flex flex-col justify-between">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-md relative card-hover overflow-hidden flex flex-col justify-between">
+                    <div class="corner-ribbon rose" data-ar="سعر منافس" data-en="Best Value" data-ru="Лучшая цена" data-ja="業界最安級" data-zh="低于同行">سعر منافس</div>
                     <div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>" data-en="Annual Renewal <span class='text-slate-500 block text-lg mt-1'>(From 2nd Year Onwards)</span>" data-ru="Ежегодное продление <span class='text-slate-500 block text-lg mt-1'>(Со 2-го года)</span>" data-ja="年間更新 <span class='text-slate-500 block text-lg mt-1'>(2年目以降)</span>" data-zh="次年起续费服务 <span class='text-slate-500 block text-lg mt-1'>(次年起适用)</span>">
                             التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>
