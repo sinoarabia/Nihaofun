@@ -40,7 +40,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <!-- JSON-LD Structured Data for Google SEO -->
     <script type="application/ld+json">
@@ -72,6 +72,12 @@
         }
         body:lang(zh) {
             font-family: 'Noto Sans SC', 'Inter', 'Tajawal', sans-serif;
+        }
+        body:lang(ru) {
+            font-family: 'Inter', 'Noto Sans SC', 'Tajawal', sans-serif;
+        }
+        body:lang(ja) {
+            font-family: 'Noto Sans JP', 'Noto Sans SC', 'Inter', 'Tajawal', sans-serif;
         }
         
         .ltr-mode {
@@ -118,11 +124,11 @@
 
             <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-5 font-semibold text-sm">
-                <a href="#services" class="hover:text-teal-600 transition" data-ar="التخصصات" data-en="Sectors" data-zh="行业">التخصصات</a>
-                <a href="#personal" class="hover:text-teal-600 transition" data-ar="مواقع الهدايا" data-en="Gift Sites" data-zh="礼物网站">مواقع الهدايا</a>
-                <a href="#comparison" class="hover:text-teal-600 transition" data-ar="لماذا نحن؟" data-en="Why Us?" data-zh="为何选择独立站">لماذا نحن؟</a>
-                <a href="#portfolio" class="hover:text-teal-600 transition text-rose-600" data-ar="نماذج أعمالنا" data-en="Portfolio" data-zh="成功案例">نماذج أعمالنا</a>
-                <a href="#pricing" class="hover:text-teal-600 transition" data-ar="الأسعار" data-en="Pricing" data-zh="价格">الأسعار</a>
+                <a href="#services" class="hover:text-teal-600 transition" data-ar="التخصصات" data-en="Sectors" data-ru="Секторы" data-ja="業界" data-zh="行业">التخصصات</a>
+                <a href="#personal" class="hover:text-teal-600 transition" data-ar="مواقع الهدايا" data-en="Gift Sites" data-ru="Подарочные сайты" data-ja="ギフトサイト" data-zh="礼物网站">مواقع الهدايا</a>
+                <a href="#comparison" class="hover:text-teal-600 transition" data-ar="لماذا نحن؟" data-en="Why Us?" data-ru="Почему мы?" data-ja="選ばれる理由" data-zh="为何选择独立站">لماذا نحن؟</a>
+                <a href="#portfolio" class="hover:text-teal-600 transition text-rose-600" data-ar="نماذج أعمالنا" data-en="Portfolio" data-ru="Портфолио" data-ja="成功事例" data-zh="成功案例">نماذج أعمالنا</a>
+                <a href="#pricing" class="hover:text-teal-600 transition" data-ar="الأسعار" data-en="Pricing" data-ru="Цены" data-ja="料金" data-zh="价格">الأسعار</a>
             </nav>
 
             <!-- Actions (Language, WhatsApp, Mobile Menu) -->
@@ -132,12 +138,14 @@
                     <button onclick="setLanguage('ar')" id="btn-ar" class="px-2 py-1 rounded-md transition bg-teal-600 text-white" aria-label="اللغة العربية">عربي</button>
                     <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900" aria-label="English Language">EN</button>
                     <button onclick="setLanguage('zh')" id="btn-zh" class="px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900" aria-label="中文">中文</button>
+                    <button onclick="setLanguage('ja')" id="btn-ja" class="px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900" aria-label="日本語">日本語</button>
+                    <button onclick="setLanguage('ru')" id="btn-ru" class="px-2 py-1 rounded-md transition text-slate-600 hover:text-slate-900" aria-label="Русский">RU</button>
                 </div>
 
                 <!-- Icon-Only WhatsApp Action -->
                 <button onclick="openPromoModal({ar: 'طلب عام / مباشر', en: 'General / Direct Order', zh: '一般需求 / 直接下单'})" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-sm transition flex items-center gap-2" title="WhatsApp Order" aria-label="WhatsApp Order">
                     <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
-                    <span class="hidden sm:inline" data-ar="طلب مباشر" data-en="Order Now" data-zh="立即下单">طلب مباشر</span>
+                    <span class="hidden sm:inline" data-ar="طلب مباشر" data-en="Order Now" data-ru="Заказать сейчас" data-ja="今すぐ注文" data-zh="立即下单">طلب مباشر</span>
                 </button>
 
                 <!-- Mobile Menu Button -->
@@ -150,11 +158,11 @@
         <!-- Mobile Navigation Dropdown (Replaced left-0 with start-0)-->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full start-0 shadow-lg top-[80px]">
             <nav class="flex flex-col px-6 py-4 space-y-4 font-semibold text-sm">
-                <a href="#services" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="التخصصات" data-en="Sectors" data-zh="行业">التخصصات</a>
-                <a href="#personal" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="مواقع الهدايا" data-en="Gift Sites" data-zh="礼物网站">مواقع الهدايا</a>
-                <a href="#comparison" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="لماذا نحن؟" data-en="Why Us?" data-zh="为何选择独立站">لماذا نحن؟</a>
-                <a href="#portfolio" class="hover:text-teal-600 transition text-rose-600 block" onclick="toggleMobileMenu()" data-ar="نماذج أعمالنا" data-en="Portfolio" data-zh="成功案例">نماذج أعمالنا</a>
-                <a href="#pricing" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="الأسعار" data-en="Pricing" data-zh="价格">الأسعار</a>
+                <a href="#services" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="التخصصات" data-en="Sectors" data-ru="Секторы" data-ja="業界" data-zh="行业">التخصصات</a>
+                <a href="#personal" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="مواقع الهدايا" data-en="Gift Sites" data-ru="Подарочные сайты" data-ja="ギフトサイト" data-zh="礼物网站">مواقع الهدايا</a>
+                <a href="#comparison" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="لماذا نحن؟" data-en="Why Us?" data-ru="Почему мы?" data-ja="選ばれる理由" data-zh="为何选择独立站">لماذا نحن؟</a>
+                <a href="#portfolio" class="hover:text-teal-600 transition text-rose-600 block" onclick="toggleMobileMenu()" data-ar="نماذج أعمالنا" data-en="Portfolio" data-ru="Портфолио" data-ja="成功事例" data-zh="成功案例">نماذج أعمالنا</a>
+                <a href="#pricing" class="hover:text-teal-600 transition block" onclick="toggleMobileMenu()" data-ar="الأسعار" data-en="Pricing" data-ru="Цены" data-ja="料金" data-zh="价格">الأسعار</a>
             </nav>
         </div>
     </header>
@@ -166,41 +174,41 @@
             <div onclick="openPromoModal({ar: 'استرداد عرض 99 دينار', en: 'Claim 99 JD Offer', zh: '兑换 99 JD 特惠礼包'})" class="bg-gradient-to-br from-yellow-300 via-amber-400 to-yellow-500 text-slate-900 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-[0_0_40px_rgba(251,191,36,0.8)] border-2 border-yellow-100 flex items-center gap-2 sm:gap-3 transform hover:scale-110 transition-transform duration-300 backdrop-blur-md cursor-pointer">
                 <div class="text-3xl sm:text-4xl animate-pulse">🎁</div>
                 <div class="flex flex-col text-center justify-center">
-                    <span class="font-black text-xs sm:text-sm text-rose-700 uppercase tracking-widest drop-shadow-sm" data-ar="عرض حصري!" data-en="Special Offer!" data-zh="限时大礼包！">عرض حصري!</span>
-                    <span class="font-extrabold text-base sm:text-xl whitespace-nowrap drop-shadow-sm" data-ar="<bdi>99</bdi> دينار / سنة أولى" data-en="99 JD / 1st Year" data-zh="首年特惠 99 JD"><bdi>99</bdi> دينار / سنة أولى</span>
+                    <span class="font-black text-xs sm:text-sm text-rose-700 uppercase tracking-widest drop-shadow-sm" data-ar="عرض حصري!" data-en="Special Offer!" data-ru="Спецпредложение!" data-ja="特別オファー！" data-zh="限时大礼包！">عرض حصري!</span>
+                    <span class="font-extrabold text-base sm:text-xl whitespace-nowrap drop-shadow-sm" data-ar="<bdi>99</bdi> دينار / سنة أولى" data-en="99 JD / 1st Year" data-ru="99 JD / первый год" data-ja="99 JD / 初年度" data-zh="首年特惠 99 JD"><bdi>99</bdi> دينار / سنة أولى</span>
                 </div>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mt-12 sm:mt-0">
-            <span class="inline-block bg-teal-500/20 text-teal-300 border border-teal-500/30 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 whitespace-nowrap" data-ar="🥇 الخدمة الأولى لتصميم المواقع في الأردن" data-en="🥇 #1 Web Development Service in Jordan" data-zh="🥇 约旦本地建站首选服务商">
+            <span class="inline-block bg-teal-500/20 text-teal-300 border border-teal-500/30 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 whitespace-nowrap" data-ar="🥇 الخدمة الأولى لتصميم المواقع في الأردن" data-en="🥇 #1 Web Development Service in Jordan" data-ru="🥇 №1 Сервис веб-разработки в Иордании" data-ja="🥇 ヨルダンNo.1ウェブ制作サービス" data-zh="🥇 约旦本地建站首选服务商">
                 🥇 الخدمة الأولى لتصميم المواقع في الأردن
             </span>
             
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-tight lg:leading-tight mb-6 text-balance" data-ar="ابنِ موقعك الإلكتروني الخاص وتفوّق على منافسيك" data-en="Build Your Custom Website & Stand Out in Jordan" data-zh="打造专属独立网站，赢得约旦本地市场">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-tight lg:leading-tight mb-6 text-balance" data-ar="ابنِ موقعك الإلكتروني الخاص وتفوّق على منافسيك" data-en="Build Your Custom Website & Stand Out in Jordan" data-ru="Создайте свой сайт и выделяйтесь в Иордании" data-ja="専用ウェブサイトを作成し、ヨルダンで際立つ存在に" data-zh="打造专属独立网站，赢得约旦本地市场">
                 ابنِ موقعك الإلكتروني الخاص وتفوّق على منافسيك
             </h1>
             
-            <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-lg mb-8 leading-relaxed text-balance" data-ar="مقابل رسوم تصميم تدفع لمرة واحدة بقيمة <span class='whitespace-nowrap font-bold text-white'><bdi>149</bdi> ديناراً فقط</span> (السنة الأولى مجانية بالكامل!)، ستحصل على موقعك الخاص. عند التسويق، فقط أرسل رابط موقعك للعملاء، ليفتحوه على الموبايل أو الكمبيوتر بدون أي إعلانات تشتت انتباههم.. لتكون أنت النجم الأبرز وتحصد الطلبات مباشرة!" data-en="For a one-time setup fee of just <span class='whitespace-nowrap font-bold text-white'>149 JOD</span> (1st year FREE!), get your exclusive website. Send your link to clients—they open it with zero distractions, making you the absolute star and driving direct orders!" data-zh="仅需 <span class='whitespace-nowrap font-bold text-white'>149 JD</span> 的一次性制作费（首年免服务费！），即可拥有绝对专属的网站。宣传时只需把网站发给客户，没有任何信息干扰，您就是最亮的明星，轻松为您拿下订单！">
+            <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-lg mb-8 leading-relaxed text-balance" data-ar="مقابل رسوم تصميم تدفع لمرة واحدة بقيمة <span class='whitespace-nowrap font-bold text-white'><bdi>149</bdi> ديناراً فقط</span> (السنة الأولى مجانية بالكامل!)، ستحصل على موقعك الخاص. عند التسويق، فقط أرسل رابط موقعك للعملاء، ليفتحوه على الموبايل أو الكمبيوتر بدون أي إعلانات تشتت انتباههم.. لتكون أنت النجم الأبرز وتحصد الطلبات مباشرة!" data-en="For a one-time setup fee of just <span class='whitespace-nowrap font-bold text-white'>149 JOD</span> (1st year FREE!), get your exclusive website. Send your link to clients—they open it with zero distractions, making you the absolute star and driving direct orders!" data-ru="За единовременную плату всего в <span class='whitespace-nowrap font-bold text-white'>149 JOD</span> (первый год БЕСПЛАТНО!), получите свой эксклюзивный сайт. Отправьте ссылку клиентам — они увидят только вас, без отвлекающих факторов, что принесет прямые заказы!" data-ja="たった <span class='whitespace-nowrap font-bold text-white'>149 JOD</span> の初期費用（初年度無料！）で、専用ウェブサイトを取得しましょう。リンクを顧客に送信するだけで、他社の広告に邪魔されることなく、直接注文を獲得できます！" data-zh="仅需 <span class='whitespace-nowrap font-bold text-white'>149 JD</span> 的一次性制作费（首年免服务费！），即可拥有绝对专属的网站。宣传时只需把网站发给客户，没有任何信息干扰，您就是最亮的明星，轻松为您拿下订单！">
                 مقابل رسوم تصميم تدفع لمرة واحدة بقيمة <span class='whitespace-nowrap font-bold text-white'><bdi>149</bdi> ديناراً فقط</span> (السنة الأولى مجانية بالكامل!)، ستحصل على موقعك الخاص. عند التسويق، فقط أرسل رابط موقعك للعملاء، ليفتحوه على الموبايل أو الكمبيوتر بدون أي إعلانات تشتت انتباههم.. لتكون أنت النجم الأبرز وتحصد الطلبات مباشرة!
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button onclick="openPromoModal({ar: 'طلب موقع جديد', en: 'New Website Order', zh: '全新网站搭建'})" class="w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-3">
                     <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
-                    <span data-ar="اطلب موقعك الآن عبر واتساب" data-en="Order Directly via WhatsApp" data-zh="通过 WhatsApp 立即下单">اطلب موقعك الآن عبر واتساب</span>
+                    <span data-ar="اطلب موقعك الآن عبر واتساب" data-en="Order Directly via WhatsApp" data-ru="Заказать напрямую через WhatsApp" data-ja="WhatsAppで直接注文" data-zh="通过 WhatsApp 立即下单">اطلب موقعك الآن عبر واتساب</span>
                 </button>
-                <a href="#comparison" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 transition whitespace-nowrap" data-ar="لماذا الموقع أفضل من السوشيال ميديا؟" data-en="Why Website vs Social Media?" data-zh="为何专属网站优于公共社交平台？">
+                <a href="#comparison" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 transition whitespace-nowrap" data-ar="لماذا الموقع أفضل من السوشيال ميديا؟" data-en="Why Website vs Social Media?" data-ru="Сайт или Соцсети?" data-ja="ウェブサイト vs SNS？" data-zh="为何专属网站优于公共社交平台？">
                     لماذا الموقع أفضل من السوشيال ميديا؟
                 </a>
             </div>
             
             <!-- Quick Trust Badges -->
             <div class="mt-14 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs text-slate-300 leading-relaxed">
-                <div><i class="fa-solid fa-clock text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="تسليم الأفراد بـ <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span><br>والشركات حسب المتطلبات" data-en="Personal sites in <span class='whitespace-nowrap'>48 hours</span><br>Corporate based on needs" data-zh="个人最快 <span class='whitespace-nowrap'>48 小时</span> 交付<br>企业按实际需求估算">تسليم الأفراد بـ <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span><br>والشركات حسب المتطلبات</span></div>
-                <div><i class="fa-solid fa-gift text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="السنة الأولى<br>مجانية بالكامل" data-en="First Year Service<br>is Completely FREE" data-zh="建成后首年<br>完全免服务费">السنة الأولى<br>مجانية بالكامل</span></div>
-                <div><i class="fa-solid fa-magnifying-glass text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="مُهيّأ للظهور<br>على بحث <bdi>Google</bdi>" data-en="Optimized for<br>Google Search" data-zh="助您在 Google<br>搜索中脱颖而出">مُهيّأ للظهور<br>على بحث <bdi>Google</bdi></span></div>
-                <div><i class="fa-solid fa-star text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="مساحة مخصصة لك<br>بدون إعلانات مزعجة" data-en="Your Own Dedicated Space<br>Zero Distractions" data-zh="专属无干扰空间<br>没有任何其他广告">مساحة مخصصة لك<br>بدون إعلانات مزعجة</span></div>
+                <div><i class="fa-solid fa-clock text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="تسليم الأفراد بـ <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span><br>والشركات حسب المتطلبات" data-en="Personal sites in <span class='whitespace-nowrap'>48 hours</span><br>Corporate based on needs" data-ru="Личные сайты за <span class='whitespace-nowrap'>48 часов</span><br>Корпоративные - по запросу" data-ja="個人サイトは<span class='whitespace-nowrap'>48時間</span><br>企業向けは要相談" data-zh="个人最快 <span class='whitespace-nowrap'>48 小时</span> 交付<br>企业按实际需求估算">تسليم الأفراد بـ <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span><br>والشركات حسب المتطلبات</span></div>
+                <div><i class="fa-solid fa-gift text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="السنة الأولى<br>مجانية بالكامل" data-en="First Year Service<br>is Completely FREE" data-ru="Обслуживание в первый год<br>абсолютно БЕСПЛАТНО" data-ja="初年度のサービスは<br>完全無料" data-zh="建成后首年<br>完全免服务费">السنة الأولى<br>مجانية بالكامل</span></div>
+                <div><i class="fa-solid fa-magnifying-glass text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="مُهيّأ للظهور<br>على بحث <bdi>Google</bdi>" data-en="Optimized for<br>Google Search" data-ru="Оптимизировано для<br>поиска Google" data-ja="Google検索に<br>最適化" data-zh="助您在 Google<br>搜索中脱颖而出">مُهيّأ للظهور<br>على بحث <bdi>Google</bdi></span></div>
+                <div><i class="fa-solid fa-star text-teal-400 text-xl mb-2 block" aria-hidden="true"></i><span data-ar="مساحة مخصصة لك<br>بدون إعلانات مزعجة" data-en="Your Own Dedicated Space<br>Zero Distractions" data-ru="Ваше личное пространство<br>Без отвлечений" data-ja="あなただけの専用スペース<br>ノイズなし" data-zh="专属无干扰空间<br>没有任何其他广告">مساحة مخصصة لك<br>بدون إعلانات مزعجة</span></div>
             </div>
         </div>
     </section>
@@ -209,11 +217,11 @@
     <section id="comparison" class="py-20 bg-slate-900 text-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-400 font-bold text-sm tracking-widest uppercase mb-2 block" data-ar="مقارنة حاسمة" data-en="CRITICAL COMPARISON" data-zh="关键优势对比">مقارنة حاسمة</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-balance" data-ar="لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على منصات التواصل الاجتماعي" data-en="Why You Need a Website: 6 Flaws of Relying Only on Social Platforms" data-zh="为什么必须有独立网站？仅依赖社交平台的 6 大致命缺陷">
+                <span class="text-teal-400 font-bold text-sm tracking-widest uppercase mb-2 block" data-ar="مقارنة حاسمة" data-en="CRITICAL COMPARISON" data-ru="КРИТИЧЕСКОЕ СРАВНЕНИЕ" data-ja="重要な比較" data-zh="关键优势对比">مقارنة حاسمة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-balance" data-ar="لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على منصات التواصل الاجتماعي" data-en="Why You Need a Website: 6 Flaws of Relying Only on Social Platforms" data-ru="Зачем вам нужен сайт: 6 недостатков соцсетей" data-ja="ウェブサイトが必要な理由：SNSに依存する6つの欠点" data-zh="为什么必须有独立网站？仅依赖社交平台的 6 大致命缺陷">
                     لماذا تحتاج موقعاً خاصاً؟ عيوب الاعتماد فقط على منصات التواصل الاجتماعي
                 </h2>
-                <p class="text-slate-400 text-balance" data-ar="وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل." data-en="Social media is good for ads, but it cannot replace your dedicated space." data-zh="公共社交平台适合打广告，但无法替代拥有绝对品牌专属感的独立空间。">
+                <p class="text-slate-400 text-balance" data-ar="وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل." data-en="Social media is good for ads, but it cannot replace your dedicated space." data-ru="Соцсети хороши для рекламы, но не заменят ваш личный сайт." data-ja="SNSは広告には適していますが、専用スペースの代わりにはなりません。" data-zh="公共社交平台适合打广告，但无法替代拥有绝对品牌专属感的独立空间。">
                     وسائل التواصل الاجتماعي ممتازة للإعلانات، لكنها لا تغني أبداً عن موقعك المستقل.
                 </p>
             </div>
@@ -223,10 +231,10 @@
                 <!-- Point 1 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="1. المصداقية والاحترافية" data-en="1. Credibility & Trust" data-zh="1. 品牌专属感与权威度">1. المصداقية والاحترافية</span>
+                        <span data-ar="1. المصداقية والاحترافية" data-en="1. Credibility & Trust" data-ru="1. Авторитет и Доверие" data-ja="1. 信頼性と権威" data-zh="1. 品牌专属感与权威度">1. المصداقية والاحترافية</span>
                         <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** الحسابات المجانية لا تعطي انطباعاً بالرسمية وتفقدك المصداقية.<br><br>✅ **الموقع المستقل:** تمتع باستخدام رابط باسمك الخاص (<bdi>.com</bdi>) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك." data-en="❌ **Social Media:** Free accounts look informal and lack official credibility.<br><br>✅ **Website:** Enjoy free usage of a custom link with your name (.com) during your entire service period to build customer trust." data-zh="❌ **社交平台:** 任何人都能免费注册账号，缺乏官方权威感与客户信任。<br><br>✅ **独立网站:** 只要在服务期内，您就享有专属名字（.com）的网址免费使用权，彰显无可比拟的形象。">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** الحسابات المجانية لا تعطي انطباعاً بالرسمية وتفقدك المصداقية.<br><br>✅ **الموقع المستقل:** تمتع باستخدام رابط باسمك الخاص (<bdi>.com</bdi>) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك." data-en="❌ **Social Media:** Free accounts look informal and lack official credibility.<br><br>✅ **Website:** Enjoy free usage of a custom link with your name (.com) during your entire service period to build customer trust." data-ru="❌ **Соцсети:** Бесплатные аккаунты выглядят неофициально.<br><br>✅ **Сайт:** Используйте персональную ссылку (.com) бесплатно весь период для укрепления доверия." data-ja="❌ **SNS:** 無料アカウントは非公式に見え、信頼性に欠けます。<br><br>✅ **ウェブサイト:** サービス期間中は独自のドメイン（.com）を無料で使用でき、顧客の信頼を築きます。" data-zh="❌ **社交平台:** 任何人都能免费注册账号，缺乏官方权威感与客户信任。<br><br>✅ **独立网站:** 只要在服务期内，您就享有专属名字（.com）的网址免费使用权，彰显无可比拟的形象。">
                         ❌ <b>السوشيال ميديا:</b> الحسابات المجانية لا تعطي انطباعاً بالرسمية وتفقدك المصداقية.<br><br>✅ <b>الموقع المستقل:</b> تمتع باستخدام رابط باسمك الخاص (<bdi>.com</bdi>) مجاناً طوال فترة خدمتك لتعزيز ثقة عملائك.
                     </p>
                 </div>
@@ -234,10 +242,10 @@
                 <!-- Point 2 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="2. خوارزميات الوصول" data-en="2. Algorithm Reach" data-zh="2. 社交平台算法依赖">2. خوارزميات الوصول</span>
+                        <span data-ar="2. خوارزميات الوصول" data-en="2. Algorithm Reach" data-ru="2. Охват алгоритмов" data-ja="2. アルゴリズムの影響" data-zh="2. 社交平台算法依赖">2. خوارزميات الوصول</span>
                         <i class="fa-solid fa-chart-line-down" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منشوراتك تصل لأقل من <bdi>5%</bdi> من متابعيك إلا إذا دفعت إعلانات ممولة مستمرة.<br><br>✅ **الموقع المستقل:** موقعك يعرض كل ما لديك <bdi>24/7</bdi> للجميع بدون قيود الإخفاء." data-en="❌ **Social Media:** Organic reach is under 5% without constant paid ads.<br><br>✅ **Website:** Everything you offer is visible 24/7 to everyone, no hidden posts." data-zh="❌ **社交平台:** 不花钱打广告，您的帖子只能触及不到 5% 的粉丝。<br><br>✅ **独立网站:** 您的所有信息全天候 24/7 完全开放，让每一个访客都能看到全部内容。">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منشوراتك تصل لأقل من <bdi>5%</bdi> من متابعيك إلا إذا دفعت إعلانات ممولة مستمرة.<br><br>✅ **الموقع المستقل:** موقعك يعرض كل ما لديك <bdi>24/7</bdi> للجميع بدون قيود الإخفاء." data-en="❌ **Social Media:** Organic reach is under 5% without constant paid ads.<br><br>✅ **Website:** Everything you offer is visible 24/7 to everyone, no hidden posts." data-ru="❌ **Соцсети:** Органический охват менее 5% без рекламы.<br><br>✅ **Сайт:** Все ваши предложения доступны всем 24/7 без скрытых постов." data-ja="❌ **SNS:** 常に広告費をかけない限り、オーガニックリーチは5%未満です。<br><br>✅ **ウェブサイト:** 提供するすべての情報が24時間365日、誰にでも隠されることなく表示されます。" data-zh="❌ **社交平台:** 不花钱打广告，您的帖子只能触及不到 5% 的粉丝。<br><br>✅ **独立网站:** 您的所有信息全天候 24/7 完全开放，让每一个访客都能看到全部内容。">
                         ❌ <b>السوشيال ميديا:</b> منشوراتك تصل لأقل من <bdi>5%</bdi> من متابعيك إلا إذا دفعت إعلانات ممولة مستمرة.<br><br>✅ <b>الموقع المستقل:</b> موقعك يعرض كل ما لديك <bdi>24/7</bdi> للجميع بدون قيود الإخفاء.
                     </p>
                 </div>
@@ -245,10 +253,10 @@
                 <!-- Point 3 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="3. محركات البحث SEO" data-en="3. Google Search" data-zh="3. 搜索引擎带来的访客">3. محركات البحث SEO</span>
+                        <span data-ar="3. محركات البحث SEO" data-en="3. Google Search" data-ru="3. Поиск Google" data-ja="3. Google検索" data-zh="3. 搜索引擎带来的访客">3. محركات البحث SEO</span>
                         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** نادراً ما تظهر صفحات السوشيال ميديا في نتائج بحث جوجل الأولى.<br><br>✅ **الموقع المستقل:** يجعلك تتصدر نتائج <bdi>Google</bdi> عندما يبحث الأردنيون عن نشاطك." data-en="❌ **Social Media:** Social profiles rarely rank high on Google Search pages.<br><br>✅ **Website:** Puts you right in front of people actively searching on Google." data-zh="❌ **社交平台:** 绝大多数社交账号主页无法在 Google 搜索结果首页排名前列。<br><br>✅ **独立网站:** 经过专业优化，让在 Google 上搜索的客户直接找到您。">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** نادراً ما تظهر صفحات السوشيال ميديا في نتائج بحث جوجل الأولى.<br><br>✅ **الموقع المستقل:** يجعلك تتصدر نتائج <bdi>Google</bdi> عندما يبحث الأردنيون عن نشاطك." data-en="❌ **Social Media:** Social profiles rarely rank high on Google Search pages.<br><br>✅ **Website:** Puts you right in front of people actively searching on Google." data-ru="❌ **Соцсети:** Профили редко занимают высокие места в Google.<br><br>✅ **Сайт:** Показывает вас тем, кто активно ищет ваши услуги в Google." data-ja="❌ **SNS:** SNSのプロフィールがGoogle検索の上位に表示されることは稀です。<br><br>✅ **ウェブサイト:** Googleで積極的に検索している人々の目の前にあなたを表示します。" data-zh="❌ **社交平台:** 绝大多数社交账号主页无法在 Google 搜索结果首页排名前列。<br><br>✅ **独立网站:** 经过专业优化，让在 Google 上搜索的客户直接找到您。">
                         ❌ <b>السوشيال ميديا:</b> نادراً ما تظهر صفحات السوشيال ميديا في نتائج بحث جوجل الأولى.<br><br>✅ <b>الموقع المستقل:</b> يجعلك تتصدر نتائج <bdi>Google</bdi> عندما يبحث الأردنيون عن نشاطك.
                     </p>
                 </div>
@@ -256,10 +264,10 @@
                 <!-- Point 4 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="4. الطلب المباشر" data-en="4. Direct Ordering Flow" data-zh="4. 无干扰，一键拿单">4. الطلب المباشر</span>
+                        <span data-ar="4. الطلب المباشر" data-en="4. Direct Ordering Flow" data-ru="4. Прямой заказ" data-ja="4. スムーズな直接注文" data-zh="4. 无干扰，一键拿单">4. الطلب المباشر</span>
                         <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** العميل يتوه في إعلانات المنافسين المزعجة والتعليقات العشوائية.<br><br>✅ **الموقع المستقل:** ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة." data-en="❌ **Social Media:** Customers get lost in competitor ads and messy platform comments.<br><br>✅ **Website:** Send the link, clients see ONLY your products, and order instantly." data-zh="❌ **社交平台:** 客户容易被同行的广告、杂乱的留言分散注意力甚至跑单。<br><br>✅ **独立网站:** 客户专心看您的产品，没有任何别人打扰，点击一键带着需求直达您的 WhatsApp！">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** العميل يتوه في إعلانات المنافسين المزعجة والتعليقات العشوائية.<br><br>✅ **الموقع المستقل:** ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة." data-en="❌ **Social Media:** Customers get lost in competitor ads and messy platform comments.<br><br>✅ **Website:** Send the link, clients see ONLY your products, and order instantly." data-ru="❌ **Соцсети:** Клиенты теряются в рекламе конкурентов.<br><br>✅ **Сайт:** Отправьте ссылку, клиенты видят ТОЛЬКО ваши продукты и сразу заказывают." data-ja="❌ **SNS:** 顧客は競合他社の広告や乱雑なコメントに気を取られてしまいます。<br><br>✅ **ウェブサイト:** リンクを送るだけで、顧客はあなたの製品「のみ」を見て、すぐに注文できます。" data-zh="❌ **社交平台:** 客户容易被同行的广告、杂乱的留言分散注意力甚至跑单。<br><br>✅ **独立网站:** 客户专心看您的产品，没有任何别人打扰，点击一键带着需求直达您的 WhatsApp！">
                         ❌ <b>السوشيال ميديا:</b> العميل يتوه في إعلانات المنافسين المزعجة والتعليقات العشوائية.<br><br>✅ <b>الموقع المستقل:</b> ترسل الرابط لعملائك ليجدوا منتجك فقط بدون إعلانات، مع زر للطلب مباشرة.
                     </p>
                 </div>
@@ -267,10 +275,10 @@
                 <!-- Point 5 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="5. أمان الحساب وإدارته" data-en="5. Safety & Peace of Mind" data-zh="5. 告别封禁，绝对安全">5. أمان الحساب وإدارته</span>
+                        <span data-ar="5. أمان الحساب وإدارته" data-en="5. Safety & Peace of Mind" data-ru="5. Безопасность" data-ja="5. 安全性と安心感" data-zh="5. 告别封禁，绝对安全">5. أمان الحساب وإدارته</span>
                         <i class="fa-solid fa-lock text-rose-400" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** قد تُحظر أو تُغلق حساباتك في أي لحظة وتخسر كل جهودك.<br><br>✅ **الموقع المستقل:** معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك." data-en="❌ **Social Media:** Your accounts can be suspended anytime, losing all your contacts.<br><br>✅ **Website:** Your information is incredibly safe. Private link usage is guaranteed and free while active." data-zh="❌ **社交平台:** 随时面临封号限流风险，辛苦积累的心血一夕清空。<br><br>✅ **独立网站:** 您的数据安全托管，不受干涉。服务期内专属网址一直免费为您护航。">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** قد تُحظر أو تُغلق حساباتك في أي لحظة وتخسر كل جهودك.<br><br>✅ **الموقع المستقل:** معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك." data-en="❌ **Social Media:** Your accounts can be suspended anytime, losing all your contacts.<br><br>✅ **Website:** Your information is incredibly safe. Private link usage is guaranteed and free while active." data-ru="❌ **Соцсети:** Ваш аккаунт могут заблокировать в любой момент.<br><br>✅ **Сайт:** Ваша информация в безопасности. Использование ссылки гарантировано и бесплатно." data-ja="❌ **SNS:** アカウントはいつでも停止される可能性があり、すべての連絡先を失うリスクがあります。<br><br>✅ **ウェブサイト:** 情報は非常に安全です。有効期間中は専用リンクの使用が無料で保証されます。" data-zh="❌ **社交平台:** 随时面临封号限流风险，辛苦积累的心血一夕清空。<br><br>✅ **独立网站:** 您的数据安全托管，不受干涉。服务期内专属网址一直免费为您护航。">
                         ❌ <b>السوشيال ميديا:</b> قد تُحظر أو تُغلق حساباتك في أي لحظة وتخسر كل جهودك.<br><br>✅ <b>الموقع المستقل:</b> معلوماتك آمنة ومستقرة تماماً. استخدام الرابط الخاص بك مضمون ومجاني طوال اشتراكك.
                     </p>
                 </div>
@@ -278,10 +286,10 @@
                 <!-- Point 6 -->
                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 relative">
                     <div class="text-rose-400 text-2xl font-bold mb-3 flex items-center justify-between">
-                        <span data-ar="6. تنظيم المحتوى وتصفحه" data-en="6. Content Organization" data-zh="6. 内容分类与浏览体验">6. تنظيم المحتوى وتصفحه</span>
+                        <span data-ar="6. تنظيم المحتوى وتصفحه" data-en="6. Content Organization" data-ru="6. Организация контента" data-ja="6. コンテンツの整理" data-zh="6. 内容分类与浏览体验">6. تنظيم المحتوى وتصفحه</span>
                         <i class="fa-solid fa-layer-group text-rose-400" aria-hidden="true"></i>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل البحث عنها.<br><br>✅ **الموقع المستقل:** كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية." data-en="❌ **Social Media:** Older posts and products get buried quickly and are hard to find.<br><br>✅ **Website:** Everything is neatly organized in clear sections, making browsing a true pleasure." data-zh="❌ **社交平台:** 过去的帖子信息流极易被淹没，客户很难翻找想要了解的信息。<br><br>✅ **独立网站:** 所有内容分类整齐，目录清晰，让客户的浏览与下单变成一种享受。">
+                    <p class="text-slate-300 text-sm leading-relaxed" data-ar="❌ **السوشيال ميديا:** منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل البحث عنها.<br><br>✅ **الموقع المستقل:** كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية." data-en="❌ **Social Media:** Older posts and products get buried quickly and are hard to find.<br><br>✅ **Website:** Everything is neatly organized in clear sections, making browsing a true pleasure." data-ru="❌ **Соцсети:** Старые посты быстро теряются.<br><br>✅ **Сайт:** Все аккуратно разбито по разделам, просматривать - одно удовольствие." data-ja="❌ **SNS:** 過去の投稿や商品はすぐに埋もれ、見つけるのが困難です。<br><br>✅ **ウェブサイト:** すべてが明確なセクションに整理されており、快適に閲覧できます。" data-zh="❌ **社交平台:** 过去的帖子信息流极易被淹没，客户很难翻找想要了解的信息。<br><br>✅ **独立网站:** 所有内容分类整齐，目录清晰，让客户的浏览与下单变成一种享受。">
                         ❌ <b>السوشيال ميديا:</b> منتجاتك وصورك القديمة تضيع بسرعة ويصعب على العميل البحث عنها.<br><br>✅ <b>الموقع المستقل:</b> كل شيء مرتب في أقسام واضحة، مما يجعل تصفح منتجاتك متعة حقيقية.
                     </p>
                 </div>
@@ -290,7 +298,7 @@
             <div class="mt-12 text-center">
                 <button onclick="openPromoModal({ar: 'طلب موقع مستقل', en: 'Independent Website Order', zh: '独立网站下单'})" class="bg-teal-500 hover:bg-teal-400 text-slate-900 font-extrabold px-8 py-3.5 rounded-xl shadow-lg transition inline-flex items-center gap-3">
                     <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
-                    <span data-ar="احصل على مساحتك المستقلة الآن" data-en="Get Your Independent Space Now" data-zh="立刻获取您的独立空间">احصل على مساحتك المستقلة الآن</span>
+                    <span data-ar="احصل على مساحتك المستقلة الآن" data-en="Get Your Independent Space Now" data-ru="Получите свое пространство сейчас" data-ja="今すぐ専用スペースを取得する" data-zh="立刻获取您的独立空间">احصل على مساحتك المستقلة الآن</span>
                 </button>
             </div>
         </div>
@@ -300,13 +308,13 @@
     <section id="personal" class="py-20 bg-slate-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="inline-block bg-teal-100 text-teal-800 border border-teal-200 px-3 py-1 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>!" data-en="⚡ Fast Turnaround: Personal Sites in <span class='whitespace-nowrap'>~48 Hours</span>!" data-zh="⚡ 极速交付：个人网站最快 <span class='whitespace-nowrap'>48小时</span> 交付！">
+                <span class="inline-block bg-teal-100 text-teal-800 border border-teal-200 px-3 py-1 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>!" data-en="⚡ Fast Turnaround: Personal Sites in <span class='whitespace-nowrap'>~48 Hours</span>!" data-ru="⚡ Быстро: Личные сайты за <span class='whitespace-nowrap'>~48 часов</span>!" data-ja="⚡ スピード納品: 個人サイトは最速<span class='whitespace-nowrap'>48時間</span>！" data-zh="⚡ 极速交付：个人网站最快 <span class='whitespace-nowrap'>48小时</span> 交付！">
                     ⚡ إنجاز قياسي: تسليم مواقع الأفراد خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>!
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="مواقع شخصية وتوثيق هدايا المناسبات 🎁" data-en="Personal & Celebration Gift Websites 🎁" data-zh="个人与家庭纪念日礼物网站 🎁">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="مواقع شخصية وتوثيق هدايا المناسبات 🎁" data-en="Personal & Celebration Gift Websites 🎁" data-ru="Сайты для подарков и торжеств 🎁" data-ja="個人＆お祝いギフトサイト 🎁" data-zh="个人与家庭纪念日礼物网站 🎁">
                     مواقع شخصية وتوثيق هدايا المناسبات 🎁
                 </h2>
-                <p class="text-slate-600 text-balance" data-ar="أفكار مبتكرة ومؤثرة لتقديم هدية تدوم مدى الحياة لمن تحب في الأردن." data-en="Unique digital gifts for birthdays, weddings, and baby growth memories in Jordan." data-zh="在约旦为亲朋好友送上一份永不褪色的数字化专属礼物。">
+                <p class="text-slate-600 text-balance" data-ar="أفكار مبتكرة ومؤثرة لتقديم هدية تدوم مدى الحياة لمن تحب في الأردن." data-en="Unique digital gifts for birthdays, weddings, and baby growth memories in Jordan." data-ru="Уникальные цифровые подарки на дни рождения, свадьбы и для воспоминаний в Иордании." data-ja="ヨルダンでの誕生日、結婚式、赤ちゃんの成長の思い出に残るユニークなデジタルギフト。" data-zh="在约旦为亲朋好友送上一份永不褪色的数字化专属礼物。">
                     أفكار مبتكرة ومؤثرة لتقديم هدية تدوم مدى الحياة لمن تحب في الأردن.
                 </p>
             </div>
@@ -316,14 +324,14 @@
                 <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-teal-500 transition card-hover flex flex-col justify-between">
                     <div>
                         <div class="text-4xl mb-4">🎂</div>
-                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="موقع هدية عيد ميلاد" data-en="Birthday Gift Website" data-zh="生日礼物专属网站">موقع هدية عيد ميلاد</h3>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="أهدِ من تحب موقعاً خاصاً يحتوي على ألبوم صور، رسائل التهنئة الصوتية، وعدّاد زمني. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Personalized site with photo galleries, audio greetings, and countdowns. <br><b>(Done in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-zh="包含照片影集、语音与文字祝福、精美倒计时的生日专属网站。<br><b>(最快 <span class='whitespace-nowrap'>48小时</span> 交付)</b>">
+                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="موقع هدية عيد ميلاد" data-en="Birthday Gift Website" data-ru="Сайт на день рождения" data-ja="誕生日ギフトサイト" data-zh="生日礼物专属网站">موقع هدية عيد ميلاد</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="أهدِ من تحب موقعاً خاصاً يحتوي على ألبوم صور، رسائل التهنئة الصوتية، وعدّاد زمني. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Personalized site with photo galleries, audio greetings, and countdowns. <br><b>(Done in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-ru="Персонализированный сайт с фото, аудио и таймером. <br><b>(Готово за <span class='whitespace-nowrap'>~48 часов</span>)</b>" data-ja="写真ギャラリー、音声メッセージ、カウントダウン付きの専用サイト。<br><b>(約<span class='whitespace-nowrap'>48時間</span>で納品)</b>" data-zh="包含照片影集、语音与文字祝福、精美倒计时的生日专属网站。<br><b>(最快 <span class='whitespace-nowrap'>48小时</span> 交付)</b>">
                             أهدِ من تحب موقعاً خاصاً يحتوي على ألبوم صور، رسائل التهنئة الصوتية، وعدّاد زمني. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>
                         </p>
                     </div>
                     <button onclick="openPromoModal({ar: 'موقع: هدية عيد ميلاد', en: 'Birthday Gift Site', zh: '生日礼物网站'})" class="w-full bg-slate-900 hover:bg-teal-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
-                        <span data-ar="اطلب موقع عيد ميلاد" data-en="Order Birthday Site" data-zh="下单生日网站">اطلب موقع عيد ميلاد</span>
+                        <span data-ar="اطلب موقع عيد ميلاد" data-en="Order Birthday Site" data-ru="Заказать сайт на день рождения" data-ja="誕生日サイトを注文" data-zh="下单生日网站">اطلب موقع عيد ميلاد</span>
                     </button>
                 </div>
 
@@ -331,14 +339,14 @@
                 <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-teal-500 transition card-hover flex flex-col justify-between">
                     <div>
                         <div class="text-4xl mb-4">💍</div>
-                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="تهنئة الزواج والذكرى السنوية" data-en="Wedding & Anniversary Site" data-zh="结婚纪念与婚礼邀请网站">تهنئة الزواج والذكرى السنوية</h3>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="تخليد ذكريات الزفاف، ودعوات الخطوبة الرقمية والتفاعلية. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Digital wedding invites and memory pages that last forever. <br><b>(Done in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-zh="永恒记录婚礼美好瞬间、互动式电子请柬与纪念日日志。<br><b>(最快 <span class='whitespace-nowrap'>48小时</span> 交付)</b>">
+                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="تهنئة الزواج والذكرى السنوية" data-en="Wedding & Anniversary Site" data-ru="Сайт для свадьбы/годовщины" data-ja="結婚式・記念日サイト" data-zh="结婚纪念与婚礼邀请网站">تهنئة الزواج والذكرى السنوية</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="تخليد ذكريات الزفاف، ودعوات الخطوبة الرقمية والتفاعلية. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Digital wedding invites and memory pages that last forever. <br><b>(Done in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-ru="Цифровые приглашения и страницы памяти навсегда. <br><b>(Готово за <span class='whitespace-nowrap'>~48 часов</span>)</b>" data-ja="永遠に残るデジタル招待状と思い出のページ。<br><b>(約<span class='whitespace-nowrap'>48時間</span>で納品)</b>" data-zh="永恒记录婚礼美好瞬间、互动式电子请柬与纪念日日志。<br><b>(最快 <span class='whitespace-nowrap'>48小时</span> 交付)</b>">
                             تخليد ذكريات الزفاف، ودعوات الخطوبة الرقمية والتفاعلية. <br><b>(تسليم خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>
                         </p>
                     </div>
                     <button onclick="openPromoModal({ar: 'موقع: ذكرى زواج / خطوبة', en: 'Wedding & Anniversary Site', zh: '婚礼/纪念日网站'})" class="w-full bg-slate-900 hover:bg-teal-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
-                        <span data-ar="اطلب موقع زواج" data-en="Order Wedding Site" data-zh="下单婚礼网站">اطلب موقع زواج</span>
+                        <span data-ar="اطلب موقع زواج" data-en="Order Wedding Site" data-ru="Заказать сайт для свадьбы" data-ja="結婚式サイトを注文" data-zh="下单婚礼网站">اطلب موقع زواج</span>
                     </button>
                 </div>
 
@@ -346,14 +354,14 @@
                 <div class="bg-white rounded-2xl p-6 border-2 border-teal-500 shadow-md transition card-hover flex flex-col justify-between">
                     <div>
                         <div class="text-4xl mb-4">👶</div>
-                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="موقع نمو الأطفال (سنة<bdi>1</bdi>، سنة<bdi>2</bdi>..)" data-en="Baby Growth & Milestones" data-zh="宝宝成长记录网站（1岁、2岁..）">موقع نمو الأطفال (سنة<bdi>1</bdi>، سنة<bdi>2</bdi>..)</h3>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="موقع متجدد لطفلك: صور السنة الأولى والثانية، والمحطات السعيدة تستمر طوال العمر. <br><b>(إطلاق الأرشيف خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Continuous growing site: 1st year, 2nd year milestones updated over time. <br><b>(Initial setup in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-zh="记录宝宝出生、一岁照、两岁照及成长里程碑，永久保留。<br><b>(首期极速 <span class='whitespace-nowrap'>48小时</span> 上线)</b>">
+                        <h3 class="text-xl font-bold mb-2 text-slate-900" data-ar="موقع نمو الأطفال (سنة<bdi>1</bdi>، سنة<bdi>2</bdi>..)" data-en="Baby Growth & Milestones" data-ru="Сайт роста ребенка" data-ja="赤ちゃんの成長記録サイト" data-zh="宝宝成长记录网站（1岁、2岁..）">موقع نمو الأطفال (سنة<bdi>1</bdi>، سنة<bdi>2</bdi>..)</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed" data-ar="موقع متجدد لطفلك: صور السنة الأولى والثانية، والمحطات السعيدة تستمر طوال العمر. <br><b>(إطلاق الأرشيف خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>" data-en="Continuous growing site: 1st year, 2nd year milestones updated over time. <br><b>(Initial setup in <span class='whitespace-nowrap'>~48 hours</span>)</b>" data-ru="Сайт, который растет: обновления каждый год. <br><b>(Запуск за <span class='whitespace-nowrap'>~48 часов</span>)</b>" data-ja="成長に合わせて更新されるサイト（1歳、2歳の節目など）。<br><b>(初期設定は約<span class='whitespace-nowrap'>48時間</span>で完了)</b>" data-zh="记录宝宝出生、一岁照、两岁照及成长里程碑，永久保留。<br><b>(首期极速 <span class='whitespace-nowrap'>48小时</span> 上线)</b>">
                             موقع متجدد لطفلك: صور السنة الأولى والثانية، والمحطات السعيدة تستمر طوال العمر. <br><b>(إطلاق الأرشيف خلال <span class='whitespace-nowrap'><bdi>48</bdi> ساعة</span>)</b>
                         </p>
                     </div>
                     <button onclick="openPromoModal({ar: 'موقع: توثيق نمو طفل', en: 'Baby Growth Site', zh: '宝宝成长记录网站'})" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
                         <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
-                        <span data-ar="اطلب موقع لطفلك الآن" data-en="Order Baby Growth Site" data-zh="下单宝宝成长记录">اطلب موقع لطفلك الآن</span>
+                        <span data-ar="اطلب موقع لطفلك الآن" data-en="Order Baby Growth Site" data-ru="Заказать сайт для ребенка" data-ja="成長記録サイトを注文" data-zh="下单宝宝成长记录">اطلب موقع لطفلك الآن</span>
                     </button>
                 </div>
             </div>
@@ -364,10 +372,10 @@
     <section id="services" class="py-20 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="حلول لجميع الأنشطة: أفضل <bdi>20</bdi> قطاعاً تجارياً في الأردن" data-en="Solutions for Top 20 Business Sectors in Jordan" data-zh="赋能约旦前20大主流行业建站方案">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="حلول لجميع الأنشطة: أفضل <bdi>20</bdi> قطاعاً تجارياً في الأردن" data-en="Solutions for Top 20 Business Sectors in Jordan" data-ru="Решения для Топ-20 секторов бизнеса в Иордании" data-ja="ヨルダンのトップ20ビジネス業界向けソリューション" data-zh="赋能约旦前20大主流行业建站方案">
                     حلول لجميع الأنشطة: أفضل <bdi>20</bdi> قطاعاً تجارياً في الأردن
                 </h2>
-                <p class="text-slate-600 text-balance" data-ar="اضغط على أي قطاع لإرسال طلب مباشر عبر الواتساب وبدء الفكرة فوراً." data-en="Click any sector to issue a direct order inquiry on WhatsApp." data-zh="点击任意行业分类，即可直接通过 WhatsApp 沟通预订。">
+                <p class="text-slate-600 text-balance" data-ar="اضغط على أي قطاع لإرسال طلب مباشر عبر الواتساب وبدء الفكرة فوراً." data-en="Click any sector to issue a direct order inquiry on WhatsApp." data-ru="Нажмите на сектор для прямого заказа в WhatsApp." data-ja="業界をクリックしてWhatsAppで直接注文のお問い合わせを送信。" data-zh="点击任意行业分类，即可直接通过 WhatsApp 沟通预订。">
                     اضغط على أي قطاع لإرسال طلب مباشر عبر الواتساب وبدء الفكرة فوراً.
                 </p>
             </div>
@@ -376,161 +384,161 @@
                 <button type="button" onclick="openPromoModal({ar: 'المطاعم والكافيهات', en: 'Restaurants & Cafes', zh: '餐饮与咖啡馆'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المطاعم والكافيهات" data-en="Restaurants & Cafes" data-zh="餐饮与咖啡馆">المطاعم والكافيهات</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المطاعم والكافيهات" data-en="Restaurants & Cafes" data-ru="Рестораны и Кафе" data-ja="レストラン＆カフェ" data-zh="餐饮与咖啡馆">المطاعم والكافيهات</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'العيادات والأطباء', en: 'Medical Clinics', zh: '诊所与医疗机构'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="العيادات والأطباء" data-en="Medical Clinics" data-zh="诊所与医疗机构">العيادات والأطباء</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="العيادات والأطباء" data-en="Medical Clinics" data-ru="Медицинские клиники" data-ja="クリニック・医療機関" data-zh="诊所与医疗机构">العيادات والأطباء</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'العقارات والمكاتب', en: 'Real Estate', zh: '房地产与中介'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-city" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="العقارات والمكاتب" data-en="Real Estate" data-zh="房地产与中介">العقارات والمكاتب</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="العقارات والمكاتب" data-en="Real Estate" data-ru="Недвижимость" data-ja="不動産" data-zh="房地产与中介">العقارات والمكاتب</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'السياحة والفنادق', en: 'Tourism & Hotels', zh: '旅游与酒店'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-plane" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="السياحة والفنادق" data-en="Tourism & Hotels" data-zh="旅游与酒店">السياحة والفنادق</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="السياحة والفنادق" data-en="Tourism & Hotels" data-ru="Туризм и Отели" data-ja="観光＆ホテル" data-zh="旅游与酒店">السياحة والفنادق</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'المتاجر الإلكترونية', en: 'E-Commerce', zh: '电商网店'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المتاجر الإلكترونية" data-en="E-Commerce" data-zh="电商网店">المتاجر الإلكترونية</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المتاجر الإلكترونية" data-en="E-Commerce" data-ru="Интернет-магазины" data-ja="Eコマース・ネットショップ" data-zh="电商网店">المتاجر الإلكترونية</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'المحاماة والاستشارات', en: 'Law Firms', zh: '律所与法律咨询'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المحاماة والاستشارات" data-en="Law Firms" data-zh="律所与法律咨询">المحاماة والاستشارات</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المحاماة والاستشارات" data-en="Law Firms" data-ru="Юридические фирмы" data-ja="法律事務所" data-zh="律所与法律咨询">المحاماة والاستشارات</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'تأجير السيارات', en: 'Car Rentals', zh: '汽车租赁与服务'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="تأجير السيارات" data-en="Car Rentals" data-zh="汽车租赁与服务">تأجير السيارات</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="تأجير السيارات" data-en="Car Rentals" data-ru="Прокат авто" data-ja="レンタカー" data-zh="汽车租赁与服务">تأجير السيارات</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'التعليم والأكاديميات', en: 'Education & Academies', zh: '教育与培训学校'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التعليم والأكاديميات" data-en="Education & Academies" data-zh="教育与培训学校">التعليم والأكاديميات</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التعليم والأكاديميات" data-en="Education & Academies" data-ru="Образование и Академии" data-ja="教育＆アカデミー" data-zh="教育与培训学校">التعليم والأكاديميات</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'صالونات التجميل والسبا', en: 'Beauty & Spa', zh: '美容沙龙与 SPA'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-spa" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="صالونات التجميل والسبا" data-en="Beauty & Spa" data-zh="美容沙龙与 SPA">صالونات التجميل والسبا</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="صالونات التجميل والسبا" data-en="Beauty & Spa" data-ru="Салоны красоты и Спа" data-ja="美容＆スパ" data-zh="美容沙龙与 SPA">صالونات التجميل والسبا</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'المقاولات والهندسة', en: 'Construction', zh: '建筑工程与施工'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المقاولات والهندسة" data-en="Construction" data-zh="建筑工程与施工">المقاولات والهندسة</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المقاولات والهندسة" data-en="Construction" data-ru="Строительство" data-ja="建築・工事" data-zh="建筑工程与施工">المقاولات والهندسة</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'التصوير والميديا', en: 'Photography', zh: '摄影与传媒制作'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-camera" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التصوير والميديا" data-en="Photography" data-zh="摄影与传媒制作">التصوير والميديا</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التصوير والميديا" data-en="Photography" data-ru="Фотография" data-ja="写真・メディア" data-zh="摄影与传媒制作">التصوير والميديا</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'تنظيم المناسبات', en: 'Events & Weddings', zh: '婚庆与活动策划'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="تنظيم المناسبات" data-en="Events & Weddings" data-zh="婚庆与活动策划">تنظيم المناسبات</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="تنظيم المناسبات" data-en="Events & Weddings" data-ru="Мероприятия и Свадьбы" data-ja="イベント＆ウェディング" data-zh="婚庆与活动策划">تنظيم المناسبات</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'المحاسبة والمالية', en: 'Accounting & Finance', zh: '财税与会计服务'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المحاسبة والمالية" data-en="Accounting & Finance" data-zh="财税与会计服务">المحاسبة والمالية</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المحاسبة والمالية" data-en="Accounting & Finance" data-ru="Бухгалтерия и Финансы" data-ja="会計＆ファイナンス" data-zh="财税与会计服务">المحاسبة والمالية</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'اللوجستيات والشحن', en: 'Logistics & Freight', zh: '物流与跨境运输'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="اللوجستيات والشحن" data-en="Logistics & Freight" data-zh="物流与跨境运输">اللوجستيات والشحن</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="اللوجستيات والشحن" data-en="Logistics & Freight" data-ru="Логистика и Грузоперевозки" data-ja="物流＆貨物" data-zh="物流与跨境运输">اللوجستيات والشحن</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'الأندية الرياضية', en: 'Gyms & Fitness', zh: '健身房与体育馆'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="الأندية الرياضية" data-en="Gyms & Fitness" data-zh="健身房与体育馆">الأندية الرياضية</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="الأندية الرياضية" data-en="Gyms & Fitness" data-ru="Спортзалы и Фитнес" data-ja="ジム＆フィットネス" data-zh="健身房与体育馆">الأندية الرياضية</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'الخدمات المنزلية', en: 'Home Services', zh: '家政与家电维修'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-wrench" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="الخدمات المنزلية" data-en="Home Services" data-zh="家政与家电维修">الخدمات المنزلية</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="الخدمات المنزلية" data-en="Home Services" data-ru="Услуги для дома" data-ja="ホームサービス" data-zh="家政与家电维修">الخدمات المنزلية</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'النظافة والحراسة', en: 'Cleaning & Security', zh: '安保与保洁公司'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="النظافة والحراسة" data-en="Cleaning & Security" data-zh="安保与保洁公司">النظافة والحراسة</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="النظافة والحراسة" data-en="Cleaning & Security" data-ru="Клининг и Охрана" data-ja="清掃＆警備" data-zh="安保与保洁公司">النظافة والحراسة</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'التجارة والاستيراد', en: 'Trading & Import/Export', zh: '进出口与贸易'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-boxes-packing" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التجارة والاستيراد" data-en="Trading & Import/Export" data-zh="进出口与贸易">التجارة والاستيراد</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التجارة والاستيراد" data-en="Trading & Import/Export" data-ru="Торговля и Импорт/Экспорт" data-ja="貿易・輸出入" data-zh="进出口与贸易">التجارة والاستيراد</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'التسويق والدعاية', en: 'Marketing Agencies', zh: '广告与数字营销'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التسويق والدعاية" data-en="Marketing Agencies" data-zh="广告与数字营销">التسويق والدعاية</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="التسويق والدعاية" data-en="Marketing Agencies" data-ru="Маркетинговые агентства" data-ja="マーケティング・広告" data-zh="广告与数字营销">التسويق والدعاية</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
 
                 <button type="button" onclick="openPromoModal({ar: 'المستشارون والخبراء', en: 'Consultants & Portfolios', zh: '个人专家与顾问'})" class="p-4 rounded-xl border border-slate-200 hover:border-teal-500 bg-slate-50 hover:bg-teal-50/50 cursor-pointer transition card-hover text-center flex flex-col justify-between w-full focus:outline-none focus:ring-2 focus:ring-teal-500">
                     <div>
                         <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-lg"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
-                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المستشارون والخبراء" data-en="Consultants & Portfolios" data-zh="个人专家与顾问">المستشارون والخبراء</h4>
+                        <h4 class="font-bold text-slate-900 text-sm whitespace-nowrap overflow-hidden text-ellipsis" data-ar="المستشارون والخبراء" data-en="Consultants & Portfolios" data-ru="Консультанты и Портфолио" data-ja="コンサルタント・個人専門家" data-zh="个人专家与顾问">المستشارون والخبراء</h4>
                     </div>
-                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-zh="立即下单">طلب مباشر</span></span>
+                    <span class="mt-3 text-xs text-teal-600 font-bold flex items-center justify-center gap-1"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <span data-ar="طلب مباشر" data-en="Order" data-ru="Заказать" data-ja="注文" data-zh="立即下单">طلب مباشر</span></span>
                 </button>
             </div>
         </div>
@@ -540,10 +548,10 @@
     <section id="pricing" class="py-20 bg-slate-100 border-t border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="باقات شاملة بدون أي تعقيدات فنية" data-en="All-Inclusive Plans with No Technical Headaches" data-zh="零门槛、无技术负担的全包方案">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="باقات شاملة بدون أي تعقيدات فنية" data-en="All-Inclusive Plans with No Technical Headaches" data-ru="Пакеты 'Всё включено' без технических проблем" data-ja="技術的な悩みが一切ないオールインワンプラン" data-zh="零门槛、无技术负担的全包方案">
                     باقات شاملة بدون أي تعقيدات فنية
                 </h2>
-                <p class="text-slate-600 text-balance" data-ar="ندير عنك كل الأمور المعقدة لتستلم مساحتك جاهزة للعمل، مع رابط باسمك الخاص وبدون أي مصاريف خفية." data-en="We handle all the complex background work. You get a ready-to-use site with your own name and zero hidden fees." data-zh="我们替您处理所有复杂的技术问题，交付给您一个带专属名字的绝对专属空间，绝无任何隐藏费用。">
+                <p class="text-slate-600 text-balance" data-ar="ندير عنك كل الأمور المعقدة لتستلم مساحتك جاهزة للعمل، مع رابط باسمك الخاص وبدون أي مصاريف خفية." data-en="We handle all the complex background work. You get a ready-to-use site with your own name and zero hidden fees." data-ru="Мы берем на себя всю сложную работу. Вы получаете готовый сайт с вашим именем без скрытых комиссий." data-ja="複雑なバックグラウンド作業はすべて当社が処理します。追加費用なしで、独自ドメインのすぐに使えるサイトを提供します。" data-zh="我们替您处理所有复杂的技术问题，交付给您一个带专属名字的绝对专属空间，绝无任何隐藏费用。">
                     ندير عنك كل الأمور المعقدة لتستلم مساحتك جاهزة للعمل، مع رابط باسمك الخاص وبدون أي مصاريف خفية.
                 </p>
             </div>
@@ -551,50 +559,50 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Year 1 -->
                 <div class="bg-white rounded-2xl p-8 border-2 border-teal-500 shadow-xl relative card-hover overflow-hidden">
-                    <span class="absolute -start-12 top-6 bg-teal-500 text-white text-xs font-bold py-1 px-12 -rotate-45" data-ar="الأكثر طلباً" data-en="Most Popular" data-zh="热门首选">الأكثر طلباً</span>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>" data-en="First Year Setup <span class='text-teal-600 block text-lg mt-1'>(Creation Fee + 1st Year FREE!)</span>" data-zh="首年建站方案 <span class='text-teal-600 block text-lg mt-1'>(仅收制作费 + 首年免服务费!)</span>">
+                    <span class="absolute -start-12 top-6 bg-teal-500 text-white text-xs font-bold py-1 px-12 -rotate-45" data-ar="الأكثر طلباً" data-en="Most Popular" data-ru="Популярное" data-ja="一番人気" data-zh="热门首选">الأكثر طلباً</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>" data-en="First Year Setup <span class='text-teal-600 block text-lg mt-1'>(Creation Fee + 1st Year FREE!)</span>" data-ru="Запуск за первый год <span class='text-teal-600 block text-lg mt-1'>(Создание + 1 год БЕСПЛАТНО!)</span>" data-ja="初年度セットアップ <span class='text-teal-600 block text-lg mt-1'>(制作費のみ ＋ 初年度無料！)</span>" data-zh="首年建站方案 <span class='text-teal-600 block text-lg mt-1'>(仅收制作费 + 首年免服务费!)</span>">
                         باقة التأسيس <span class='text-teal-600 block text-lg mt-1'>(رسوم تصميم لمرة واحدة + سنة أولى مجاناً!)</span>
                     </h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed" data-ar="ادفع مرة واحدة فقط لبناء موقعك بالكامل واحصل على السنة الأولى مجاناً." data-en="Pay just once to build your site and get the first year of service totally free." data-zh="仅需支付一次性的网站制作费，即可获得完整网站，首年服务费全免！">
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed" data-ar="ادفع مرة واحدة فقط لبناء موقعك بالكامل واحصل على السنة الأولى مجاناً." data-en="Pay just once to build your site and get the first year of service totally free." data-ru="Заплатите один раз за создание сайта и получите первый год обслуживания бесплатно." data-ja="一度の制作費だけでサイトを構築し、初年度のサービスを完全に無料で利用できます。" data-zh="仅需支付一次性的网站制作费，即可获得完整网站，首年服务费全免！">
                         ادفع مرة واحدة فقط لبناء موقعك بالكامل واحصل على السنة الأولى مجاناً.
                     </p>
                     <div class="flex items-baseline mb-6">
                         <span class="text-4xl sm:text-5xl font-extrabold text-teal-600 whitespace-nowrap"><bdi>149 - 499</bdi></span>
-                        <span class="text-lg font-bold text-slate-700 mx-2 whitespace-nowrap" data-ar="دينار أردني (JD)" data-en="JOD" data-zh="约旦第纳尔 (JD)">دينار أردني (JD)</span>
+                        <span class="text-lg font-bold text-slate-700 mx-2 whitespace-nowrap" data-ar="دينار أردني (JD)" data-en="JOD" data-ru="JOD" data-ja="JOD" data-zh="约旦第纳尔 (JD)">دينار أردني (JD)</span>
                     </div>
                     <ul class="space-y-4 text-sm text-slate-600 mb-8">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="أرسل الرابط لعملائك ليطلبوا مباشرة بدون أي تشتيت إعلاني." data-en="Send link directly to clients to get orders with zero distractions." data-zh="将网址发给客户，没有任何干扰信息，直接为您拿下订单。">أرسل الرابط لعملائك ليطلبوا مباشرة بدون أي تشتيت إعلاني.</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="استخدام رابط خاص باسمك أو اسم شركتك (<bdi>.com</bdi>)." data-en="A private link with your exact name (.com)." data-zh="拥有您或公司的专属名字作为独立网址 (.com)。">استخدام رابط خاص باسمك أو اسم شركتك (<bdi>.com</bdi>).</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="المواقع الشخصية تسلم خلال <span class='whitespace-nowrap font-bold'><bdi>48</bdi> ساعة</span>، ومواقع الشركات تحدد بمدة زمنية دقيقة حسب متطلباتك." data-en="Personal sites in <span class='whitespace-nowrap font-bold'>48 hours</span>. Corporate sites scheduled reasonably based on your scope." data-zh="个人网站最快 <span class='whitespace-nowrap font-bold'>48小时</span> 交付。公司客户根据实际需求提供合理的估算排期。">المواقع الشخصية تسلم خلال <span class='whitespace-nowrap font-bold'><bdi>48</bdi> ساعة</span>، ومواقع الشركات تحدد بمدة زمنية دقيقة حسب متطلباتك.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="أرسل الرابط لعملائك ليطلبوا مباشرة بدون أي تشتيت إعلاني." data-en="Send link directly to clients to get orders with zero distractions." data-ru="Отправляйте ссылку клиентам и получайте заказы без отвлекающих факторов." data-ja="リンクを顧客に直接送信して、ノイズなしで注文を獲得します。" data-zh="将网址发给客户，没有任何干扰信息，直接为您拿下订单。">أرسل الرابط لعملائك ليطلبوا مباشرة بدون أي تشتيت إعلاني.</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="استخدام رابط خاص باسمك أو اسم شركتك (<bdi>.com</bdi>)." data-en="A private link with your exact name (.com)." data-ru="Приватная ссылка с вашим именем (.com)." data-ja="あなた独自の名前のプライベートリンク（.com）。" data-zh="拥有您或公司的专属名字作为独立网址 (.com)。">استخدام رابط خاص باسمك أو اسم شركتك (<bdi>.com</bdi>).</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1" aria-hidden="true"></i> <span data-ar="المواقع الشخصية تسلم خلال <span class='whitespace-nowrap font-bold'><bdi>48</bdi> ساعة</span>، ومواقع الشركات تحدد بمدة زمنية دقيقة حسب متطلباتك." data-en="Personal sites in <span class='whitespace-nowrap font-bold'>48 hours</span>. Corporate sites scheduled reasonably based on your scope." data-ru="Личные сайты за <span class='whitespace-nowrap font-bold'>48 часов</span>. Корпоративные - по запросу." data-ja="個人サイトは<span class='whitespace-nowrap font-bold'>48時間</span>。企業サイトは要件に基づいて合理的にスケジューリング。" data-zh="个人网站最快 <span class='whitespace-nowrap font-bold'>48小时</span> 交付。公司客户根据实际需求提供合理的估算排期。">المواقع الشخصية تسلم خلال <span class='whitespace-nowrap font-bold'><bdi>48</bdi> ساعة</span>، ومواقع الشركات تحدد بمدة زمنية دقيقة حسب متطلباتك.</span></li>
                     </ul>
                     <button onclick="openPromoModal({ar: 'باقة التأسيس', en: 'First Year Setup', zh: '首年建站方案'})" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
-                        <span data-ar="اطلب مساحتك الآن" data-en="Order Your Space Now" data-zh="通过 WhatsApp 立即下单">اطلب مساحتك الآن</span>
+                        <span data-ar="اطلب مساحتك الآن" data-en="Order Your Space Now" data-ru="Заказать свое пространство" data-ja="今すぐ専用スペースを注文" data-zh="通过 WhatsApp 立即下单">اطلب مساحتك الآن</span>
                     </button>
                 </div>
 
                 <!-- Year 2 Renewal -->
                 <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-md card-hover flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>" data-en="Annual Renewal <span class='text-slate-500 block text-lg mt-1'>(From 2nd Year Onwards)</span>" data-zh="次年起续费服务 <span class='text-slate-500 block text-lg mt-1'>(次年起适用)</span>">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2" data-ar="التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>" data-en="Annual Renewal <span class='text-slate-500 block text-lg mt-1'>(From 2nd Year Onwards)</span>" data-ru="Ежегодное продление <span class='text-slate-500 block text-lg mt-1'>(Со 2-го года)</span>" data-ja="年間更新 <span class='text-slate-500 block text-lg mt-1'>(2年目以降)</span>" data-zh="次年起续费服务 <span class='text-slate-500 block text-lg mt-1'>(次年起适用)</span>">
                             التجديد السنوي <span class='text-slate-500 block text-lg mt-1'>(ابتداءً من السنة الثانية)</span>
                         </h3>
-                        <p class="text-slate-500 text-sm mb-6 leading-relaxed" data-ar="للحفاظ على تواجدك واستمرار عمل موقعك بسلاسة وبدون انقطاع." data-en="Keep your digital presence running smoothly without interruptions." data-zh="确保您的专属空间持续无忧运行，保持 24 小时在线。">
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed" data-ar="للحفاظ على تواجدك واستمرار عمل موقعك بسلاسة وبدون انقطاع." data-en="Keep your digital presence running smoothly without interruptions." data-ru="Обеспечьте бесперебойную работу вашего сайта." data-ja="ウェブサイトを中断することなくスムーズに稼働させ続けます。" data-zh="确保您的专属空间持续无忧运行，保持 24 小时在线。">
                             للحفاظ على تواجدك واستمرار عمل موقعك بسلاسة وبدون انقطاع.
                         </p>
                         <div class="flex items-baseline mb-6">
                             <span class="text-4xl sm:text-5xl font-extrabold text-slate-900 whitespace-nowrap"><bdi>59 - 399</bdi></span>
-                            <span class="text-lg font-bold text-slate-700 mx-2 whitespace-nowrap" data-ar="دينار / سنوياً" data-en="JOD / Year" data-zh="JD / 每年">دينار / سنوياً</span>
+                            <span class="text-lg font-bold text-slate-700 mx-2 whitespace-nowrap" data-ar="دينار / سنوياً" data-en="JOD / Year" data-ru="JOD / год" data-ja="JOD / 年" data-zh="JD / 每年">دينار / سنوياً</span>
                         </div>
                         <ul class="space-y-4 text-sm text-slate-600 mb-8">
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="تعديل بياناتك (رقم الهاتف والإيميل) مجاناً حتى <span class='whitespace-nowrap font-bold'><bdi>10</bdi> مرات سنوياً</span>!" data-en="Free updates for phone & email up to <span class='whitespace-nowrap font-bold'>10 times a year</span>!" data-zh="免费贴心服务：每年支持修改电话号码和邮箱多达 <span class='whitespace-nowrap font-bold'>10 次</span>！">تعديل بياناتك (رقم الهاتف والإيميل) مجاناً حتى <span class='whitespace-nowrap font-bold'><bdi>10</bdi> مرات سنوياً</span>!</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="استمرار عمل رابط موقعك الخاص (<bdi>.com</bdi>) للوصول المباشر." data-en="Keep your private link (.com) working perfectly." data-zh="持续免费享有您的专属网址名称 (.com) 访问权限。">استمرار عمل رابط موقعك الخاص (<bdi>.com</bdi>) للوصول المباشر.</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="تخزين بياناتك بأمان وبقاؤها على الإنترنت بدون أي توقف." data-en="Keep your info safe and always online with zero downtime." data-zh="安全存储网站内容，并保障服务器免受攻击与宕机。">تخزين بياناتك بأمان وبقاؤها على الإنترنت بدون أي توقف.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="تعديل بياناتك (رقم الهاتف والإيميل) مجاناً حتى <span class='whitespace-nowrap font-bold'><bdi>10</bdi> مرات سنوياً</span>!" data-en="Free updates for phone & email up to <span class='whitespace-nowrap font-bold'>10 times a year</span>!" data-ru="Бесплатное обновление номера и email до <span class='whitespace-nowrap font-bold'>10 раз в год</span>!" data-ja="電話番号とメールアドレスの無料更新が<span class='whitespace-nowrap font-bold'>年間最大10回</span>まで可能！" data-zh="免费贴心服务：每年支持修改电话号码和邮箱多达 <span class='whitespace-nowrap font-bold'>10 次</span>！">تعديل بياناتك (رقم الهاتف والإيميل) مجاناً حتى <span class='whitespace-nowrap font-bold'><bdi>10</bdi> مرات سنوياً</span>!</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="استمرار عمل رابط موقعك الخاص (<bdi>.com</bdi>) للوصول المباشر." data-en="Keep your private link (.com) working perfectly." data-ru="Сохранение работоспособности вашей ссылки (.com)." data-ja="プライベートリンク（.com）の完全な動作を維持します。" data-zh="持续免费享有您的专属网址名称 (.com) 访问权限。">استمرار عمل رابط موقعك الخاص (<bdi>.com</bdi>) للوصول المباشر.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-600 mt-1" aria-hidden="true"></i> <span data-ar="تخزين بياناتك بأمان وبقاؤها على الإنترنت بدون أي توقف." data-en="Keep your info safe and always online with zero downtime." data-ru="Ваша информация в безопасности и всегда онлайн без простоев." data-ja="情報を安全に保ち、ダウンタイムなしで常にオンラインにします。" data-zh="安全存储网站内容，并保障服务器免受攻击与宕机。">تخزين بياناتك بأمان وبقاؤها على الإنترنت بدون أي توقف.</span></li>
                         </ul>
                     </div>
                     <button onclick="openPromoModal({ar: 'التجديد السنوي', en: 'Annual Renewal', zh: '续费服务'})" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3.5 rounded-xl transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
-                        <span data-ar="تواصل للتجديد عبر واتساب" data-en="Inquire Renewal via WhatsApp" data-zh="通过 WhatsApp 咨询续费">تواصل للتجديد عبر واتساب</span>
+                        <span data-ar="تواصل للتجديد عبر واتساب" data-en="Inquire Renewal via WhatsApp" data-ru="Продлить через WhatsApp" data-ja="WhatsAppで更新を問い合わせ" data-zh="通过 WhatsApp 咨询续费">تواصل للتجديد عبر واتساب</span>
                     </button>
                 </div>
             </div>
@@ -605,13 +613,13 @@
     <section id="portfolio" class="py-20 bg-white border-t border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="inline-block bg-rose-100 text-rose-700 border border-rose-200 px-4 py-1.5 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="🔥 نتائج حقيقية للعملاء" data-en="🔥 Real Client Results" data-zh="🔥 真实效果与成功案例">
+                <span class="inline-block bg-rose-100 text-rose-700 border border-rose-200 px-4 py-1.5 rounded-full text-xs font-bold mb-3 whitespace-nowrap" data-ar="🔥 نتائج حقيقية للعملاء" data-en="🔥 Real Client Results" data-ru="🔥 Реальные результаты" data-ja="🔥 顧客のリアルな成果" data-zh="🔥 真实效果与成功案例">
                     🔥 نتائج حقيقية للعملاء
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="قصص نجاح: تدفق مستمر للطلبات!" data-en="Success Stories: Non-Stop Orders!" data-zh="成功案例：他们已开始获取源源不断的订单！">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 text-balance" data-ar="قصص نجاح: تدفق مستمر للطلبات!" data-en="Success Stories: Non-Stop Orders!" data-ru="Истории успеха: Непрерывные заказы!" data-ja="成功事例：止まらない注文！" data-zh="成功案例：他们已开始获取源源不断的订单！">
                     قصص نجاح: تدفق مستمر للطلبات!
                 </h2>
-                <p class="text-slate-600 text-base sm:text-lg leading-relaxed text-balance" data-ar="إليك مواقع حقيقية صممناها لعملائنا في العالم العربي. بدون ضجيج السوشيال ميديا، الموقع المستقل يجعل العميل يركز <bdi>100%</bdi> على منتجك، مما يعني تفاعلاً أقوى ومبيعات مباشرة وأسرع!" data-en="Check out real websites built for our Arab clients. Without the noise of social media, a dedicated site commands 100% of the customer's attention, leading to stronger engagement and direct sales!" data-zh="看看这些阿拉伯本地客户真实的独立站。没有了社交平台的嘈杂，您的客户注意力将 100% 聚焦在您的产品上。这意味着更高的转化率，成交更直接、更快速！">
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed text-balance" data-ar="إليك مواقع حقيقية صممناها لعملائنا في العالم العربي. بدون ضجيج السوشيال ميديا، الموقع المستقل يجعل العميل يركز <bdi>100%</bdi> على منتجك، مما يعني تفاعلاً أقوى ومبيعات مباشرة وأسرع!" data-en="Check out real websites built for our Arab clients. Without the noise of social media, a dedicated site commands 100% of the customer's attention, leading to stronger engagement and direct sales!" data-ru="Посмотрите сайты наших арабских клиентов. Личный сайт удерживает 100% внимания клиента, что приводит к прямым продажам!" data-ja="アラブの顧客向けに構築された実際のウェブサイトをご覧ください。SNSのノイズがない専用サイトは、顧客の注目を100%集め、直接販売に繋がります！" data-zh="看看这些阿拉伯本地客户真实的独立站。没有了社交平台的嘈杂，您的客户注意力将 100% 聚焦在您的产品上。这意味着更高的转化率，成交更直接、更快速！">
                     إليك مواقع حقيقية صممناها لعملائنا في العالم العربي. بدون ضجيج السوشيال ميديا، الموقع المستقل يجعل العميل يركز <bdi>100%</bdi> على منتجك، مما يعني تفاعلاً أقوى ومبيعات مباشرة وأسرع!
                 </p>
             </div>
@@ -623,7 +631,7 @@
                         <img src="T2.png" alt="Jordan Baby Website" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Jordan Baby</h3>
-                    <p class="text-slate-500 text-sm mb-6 w-full" data-ar="موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة." data-en="A dedicated site for children's products driving direct sales." data-zh="专注于儿童产品的独立站，直接带动销售与订单转化。">
+                    <p class="text-slate-500 text-sm mb-6 w-full" data-ar="موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة." data-en="A dedicated site for children's products driving direct sales." data-ru="Сайт детских товаров, стимулирующий прямые продажи." data-ja="直接販売を促進する子供向け商品の専用サイト。" data-zh="专注于儿童产品的独立站，直接带动销售与订单转化。">
                         موقع مخصص لمنتجات الأطفال، ساهم في زيادة المبيعات المباشرة.
                     </p>
                     <a href="https://www.jordanbaby.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
@@ -638,7 +646,7 @@
                         <img src="T1.png" alt="Nihao Play Website" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2" style="font-family: 'Inter', sans-serif;">Nihao Play</h3>
-                    <p class="text-slate-500 text-sm mb-6 w-full" data-ar="منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة." data-en="An interactive educational platform generating steady interest and requests." data-zh="互动式教育与游乐平台，成功吸引广泛关注并获取持续订单。">
+                    <p class="text-slate-500 text-sm mb-6 w-full" data-ar="منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة." data-en="An interactive educational platform generating steady interest and requests." data-ru="Интерактивная образовательная платформа со стабильным потоком запросов." data-ja="安定した関心とリクエストを生み出すインタラクティブな教育プラットフォーム。" data-zh="互动式教育与游乐平台，成功吸引广泛关注并获取持续订单。">
                         منصة تعليمية وترفيهية تفاعلية جذبت اهتماماً واسعاً وطلبات مستمرة.
                     </p>
                     <a href="https://www.nihaoplay.com" target="_blank" rel="noopener noreferrer" class="mt-auto bg-white border-2 border-slate-200 text-slate-800 hover:border-teal-500 hover:text-teal-600 font-bold py-2.5 px-6 rounded-xl transition w-full sm:w-auto flex items-center justify-center gap-2 group-hover:shadow-md">
@@ -649,13 +657,13 @@
             </div>
             
            <div class="mt-12 text-center">
-                <p class="text-slate-500 text-sm font-semibold text-balance mb-6" data-ar="انضم إليهم الآن واجعل عملك يتحدث عن نفسه!" data-en="Join them today and let your business speak for itself!" data-zh="现在就加入他们，让您的业务闪耀全网！">
+                <p class="text-slate-500 text-sm font-semibold text-balance mb-6" data-ar="انضم إليهم الآن واجعل عملك يتحدث عن نفسه!" data-en="Join them today and let your business speak for itself!" data-ru="Присоединяйтесь сегодня и пусть ваш бизнес говорит сам за себя!" data-ja="今すぐ参加して、あなたのビジネスを輝かせましょう！" data-zh="现在就加入他们，让您的业务闪耀全网！">
                     انضم إليهم الآن واجعل عملك يتحدث عن نفسه!
                 </p>
                 
                 <a href="KEYIRBID.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 text-base">
                     <i class="fa-solid fa-mug-hot text-xl" aria-hidden="true"></i>
-                    <span data-ar="تجربة نموذج مطعم وكافيه (طلب مباشر)" data-en="Live Demo: Cafe & Restaurant" data-zh="沉浸式体验：餐厅与咖啡馆 Demo">تجربة نموذج مطعم وكافيه (طلب مباشر)</span>
+                    <span data-ar="تجربة نموذج مطعم وكافيه (طلب مباشر)" data-en="Live Demo: Cafe & Restaurant" data-ru="Демо: Кафе и Ресторан" data-ja="デモを体験：カフェ＆レストラン" data-zh="沉浸式体验：餐厅与咖啡馆 Demo">تجربة نموذج مطعم وكافيه (طلب مباشر)</span>
                 </a>
             </div>
         </div>
@@ -668,7 +676,7 @@
             <!-- Brand & Copyright -->
             <div>
                 <span class="text-2xl font-extrabold text-white">Nihao<span class="text-teal-500">Fun</span>.com</span>
-                <p class="text-xs text-slate-500 mt-2" data-ar="جميع الحقوق محفوظة © <bdi>2026</bdi> - تصميم المواقع في الأردن" data-en="All Rights Reserved © 2026 - Jordan Web Development" data-zh="版权所有 © 2026 - NihaoFun 约旦建站服务">
+                <p class="text-xs text-slate-500 mt-2" data-ar="جميع الحقوق محفوظة © <bdi>2026</bdi> - تصميم المواقع في الأردن" data-en="All Rights Reserved © 2026 - Jordan Web Development" data-ru="Все права защищены © 2026 - Веб-разработка Иордания" data-ja="All Rights Reserved © 2026 - ヨルダンウェブ制作" data-zh="版权所有 © 2026 - NihaoFun 约旦建站服务">
                     جميع الحقوق محفوظة © <bdi>2026</bdi> - تصميم المواقع في الأردن
                 </p>
             </div>
@@ -680,7 +688,7 @@
                 
                 <!-- Magic Tooltip -->
                 <span id="emailTooltip" class="absolute -top-12 inset-x-0 mx-auto w-max bg-slate-800 text-white text-xs py-1.5 px-3 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none shadow-lg flex flex-col items-center justify-center">
-                    <span id="emailTooltipText" data-ar="تم النسخ! انقر مرتين للمراسلة" data-en="Copied! Double click to compose" data-zh="已复制！双击直接发邮件">تم النسخ! انقر مرتين للمراسلة</span>
+                    <span id="emailTooltipText" data-ar="تم النسخ! انقر مرتين للمراسلة" data-en="Copied! Double click to compose" data-ru="Скопировано! Двойной клик для письма" data-ja="コピーしました！ダブルクリックでメール作成" data-zh="已复制！双击直接发邮件">تم النسخ! انقر مرتين للمراسلة</span>
                     <div class="absolute -bottom-1 w-2 h-2 bg-slate-800 rotate-45"></div>
                 </span>
             </button>
@@ -693,7 +701,7 @@
                 </div>
                 <div class="flex items-center gap-2 text-slate-400">
                     <i class="fa-solid fa-location-dot text-teal-500 text-lg"></i>
-                    <span data-ar="عمان، الأردن" data-en="Amman, Jordan" data-zh="约旦，安曼">عمان، الأردن</span>
+                    <span data-ar="عمان، الأردن" data-en="Amman, Jordan" data-ru="Амман, Иордания" data-ja="ヨルダン、アンマン" data-zh="约旦，安曼">عمان، الأردن</span>
                 </div>
             </div>
 
@@ -712,18 +720,18 @@
                     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900" data-ar="تأكيد الطلب المباشر" data-en="Confirm Direct Order" data-zh="确认订单细节">تأكيد الطلب المباشر</h3>
-                    <p class="text-xs text-slate-500" data-ar="الخطوة <bdi>1</bdi>: استعراض وتعديل الرسالة الجذابة" data-en="Step 1: Preview & Edit Your Pitch" data-zh="步骤 1: 预览并编辑发往 WhatsApp 的信息">الخطوة <bdi>1</bdi>: استعراض وتعديل الرسالة الجذابة</p>
+                    <h3 class="text-xl font-bold text-slate-900" data-ar="تأكيد الطلب المباشر" data-en="Confirm Direct Order" data-ru="Подтвердить прямой заказ" data-ja="注文の確認" data-zh="确认订单细节">تأكيد الطلب المباشر</h3>
+                    <p class="text-xs text-slate-500" data-ar="الخطوة <bdi>1</bdi>: استعراض وتعديل الرسالة الجذابة" data-en="Step 1: Preview & Edit Your Pitch" data-ru="Шаг 1: Проверьте и измените сообщение" data-ja="ステップ1: メッセージのプレビューと編集" data-zh="步骤 1: 预览并编辑发往 WhatsApp 的信息">الخطوة <bdi>1</bdi>: استعراض وتعديل الرسالة الجذابة</p>
                 </div>
             </div>
 
             <div class="mb-4 bg-slate-100 p-3 rounded-xl border border-slate-200">
-                <span class="text-xs text-slate-500 block" data-ar="الطلب/القطاع المحدد:" data-en="Selected Request:" data-zh="已选服务:">الطلب/القطاع المحدد:</span>
+                <span class="text-xs text-slate-500 block" data-ar="الطلب/القطاع المحدد:" data-en="Selected Request:" data-ru="Выбранный запрос:" data-ja="選択されたリクエスト:" data-zh="已选服务:">الطلب/القطاع المحدد:</span>
                 <span id="modalSectorName" class="font-bold text-slate-800 text-sm">...</span>
             </div>
 
             <div class="mb-6">
-                <label class="block text-xs font-bold text-slate-700 mb-2" for="whatsappMessageText" data-ar="نص الرسالة الترويجية الجاهزة للواتساب:" data-en="WhatsApp Pitch Message:" data-zh="WhatsApp 预设消息 (可编辑):">
+                <label class="block text-xs font-bold text-slate-700 mb-2" for="whatsappMessageText" data-ar="نص الرسالة الترويجية الجاهزة للواتساب:" data-en="WhatsApp Pitch Message:" data-ru="Сообщение для WhatsApp:" data-ja="WhatsApp用メッセージ:" data-zh="WhatsApp 预设消息 (可编辑):">
                     نص الرسالة الترويجية الجاهزة للواتساب:
                 </label>
                 <textarea id="whatsappMessageText" rows="5" class="w-full text-sm p-3 border border-slate-300 rounded-xl bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 focus:outline-none text-slate-800 leading-relaxed"></textarea>
@@ -732,7 +740,7 @@
             <!-- Step 2 WhatsApp Trigger Button -->
             <button onclick="sendToWhatsApp()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
                 <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
-                <span data-ar="الخطوة <bdi>2</bdi>: فتح واتساب وإرسال الطلب 🚀" data-en="Step 2: Send Order via WhatsApp 🚀" data-zh="步骤 2: 打开 WhatsApp 发送订单 🚀">الخطوة <bdi>2</bdi>: فتح واتساب وإرسال الطلب 🚀</span>
+                <span data-ar="الخطوة <bdi>2</bdi>: فتح واتساب وإرسال الطلب 🚀" data-en="Step 2: Send Order via WhatsApp 🚀" data-ru="Шаг 2: Отправить заказ в WhatsApp 🚀" data-ja="ステップ2: WhatsAppで注文を送信 🚀" data-zh="步骤 2: 打开 WhatsApp 发送订单 🚀">الخطوة <bdi>2</bdi>: فتح واتساب وإرسال الطلب 🚀</span>
             </button>
         </div>
     </div>
@@ -760,9 +768,9 @@
             const browserLang = navigator.language.slice(0, 2);
             let initLang = 'ar';
             
-            if (savedLang && ['ar', 'en', 'zh'].includes(savedLang)) {
+            if (savedLang && ['ar', 'en', 'zh', 'ru', 'ja'].includes(savedLang)) {
                 initLang = savedLang;
-            } else if (browserLang === 'en' || browserLang === 'zh') {
+            } else if (browserLang === 'en' || browserLang === 'zh' || browserLang === 'ru' || browserLang === 'ja') {
                 initLang = browserLang;
             }
             
@@ -778,6 +786,10 @@
         function generatePitch(sectorName) {
             if (currentLang === 'zh') {
                 return `你好！我希望在 NihaoFun 咨询/下单搭建我的专属网站。\n\n📌 目标项目: ${sectorName}\n💰 首年预算: 标准价 149 JD (申请 99 JD 特惠大礼包！)\n⚡ 需求: 让我的产品成为唯一焦点，直接拿单\n\n请尽快回复我，谢谢！`;
+            } else if (currentLang === 'ja') {
+                return `こんにちは！NihaoFunに専用ウェブサイトの制作について問い合わせ/注文したいです。\n\n📌 サービス: ${sectorName}\n💰 予算: 通常 149 JD (99 JDの特別オファーを希望します！)\n⚡ 目標: 顧客からの直接注文を増やしたいです！\n\nお返事お待ちしております。`;
+            } else if (currentLang === 'ru') {
+                return `Привет, команда NihaoFun! 👋\nЯ хотел бы заказать свой собственный сайт в Иордании.\n\n📌 Услуга: ${sectorName}\n💰 Бюджет: Стандартный 149 JD (Хочу спецпредложение за 99 JD!)\n⚡ Цель: Я хочу, чтобы мои продукты были в центре внимания и приносили прямые заказы!\n\nЖду вашего ответа. Спасибо!`;
             } else if (currentLang === 'en') {
                 return `Hello NihaoFun Team! 👋\nI would like to inquire/order my own dedicated website in Jordan.\n\n📌 Service: ${sectorName}\n💰 Budget: Standard 149 JOD (Claiming the 99 JD Special Offer!)\n⚡ Goal: I want my products to be the absolute star to get direct orders!\n\nPlease reach out to discuss details. Thanks!`;
             } else {
@@ -839,10 +851,14 @@
                 
                 let subject = encodeURIComponent(
                     currentLang === 'zh' ? "网站建设咨询 - NihaoFun" : 
+                    currentLang === 'ja' ? "ウェブ制作のお問い合わせ - NihaoFun" :
+                    currentLang === 'ru' ? "Запрос на создание сайта - NihaoFun" :
                     (currentLang === 'en' ? "Web Design Inquiry - NihaoFun" : "استفسار عن تصميم موقع - NihaoFun")
                 );
                 let body = encodeURIComponent(
                     currentLang === 'zh' ? "你好 NihaoFun 团队，\n\n我对你们的建站服务非常感兴趣，希望能了解更多细节。\n\n我的主要需求是：" : 
+                    currentLang === 'ja' ? "NihaoFunチームの皆様、\n\nウェブ制作サービスに大変興味があります。詳細について教えていただけますか。\n\n主な要望は以下の通りです：" :
+                    currentLang === 'ru' ? "Здравствуйте, команда NihaoFun,\n\nЯ очень заинтересован в ваших услугах веб-дизайна.\n\nМои основные требования:" :
                     (currentLang === 'en' ? "Hello NihaoFun Team,\n\nI am very interested in your web design services.\n\nMy primary requirements are:" : 
                     "مرحباً فريق NihaoFun،\n\nأنا مهتم جداً بخدمات تصميم المواقع الخاصة بكم.\n\nمتطلباتي الأساسية هي:")
                 );
@@ -866,11 +882,13 @@
             const titles = {
                 'ar': 'NihaoFun - تصميم مواقع إلكترونية في الأردن',
                 'en': 'NihaoFun - Web Design Jordan',
-                'zh': 'NihaoFun - 约旦网站建设'
+                'zh': 'NihaoFun - 约旦网站建设',
+                'ru': 'NihaoFun - Веб-дизайн в Иордании',
+                'ja': 'NihaoFun - ヨルダンのウェブ制作'
             };
             document.title = titles[lang] || titles['ar'];
 
-            ['ar', 'en', 'zh'].forEach(l => {
+            ['ar', 'en', 'zh', 'ru', 'ja'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if (btn) {
                     if (l === lang) {
